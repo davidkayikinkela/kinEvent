@@ -1,0 +1,958 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+/* header */
+body{
+    background-color: rgb(194, 194, 194);
+}
+nav{
+    width: 100%;
+    height: 140px;
+    background-color: rgb(71, 23, 80);
+    border-radius: 0 0 30px 30px;
+
+}
+.logo{
+    width: 300px;
+    position: absolute;
+    top: 7px;
+    left: 4%;
+}
+nav ul{
+    float: right;
+    margin-right: 25px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+    
+    
+}
+nav ul li a{
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+    padding: 5px 0;
+    text-transform: uppercase;
+    top: 28px;
+}
+nav ul li a::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;  
+    background-color: rgb(218, 49, 49);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+}
+nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+} 
+.hamburger-menu{  
+    display: none;
+    position: absolute; 
+    right: 20px;
+    width: 110px;
+    height: 110px;
+    background-color: black;
+    box-shadow: 
+        0 0 5px rgb(0, 174, 255),
+        0 0 10px rgb(0, 174, 255),
+        0 0 20px rgb(0, 174, 255),
+        0 0 40px rgb(0, 174, 255);
+    border-radius: 20px;
+    cursor: pointer;
+    top: 10px; 
+}
+.hamburger-icon{
+    position: relative;
+    width: 80px;
+    height: 70px;
+    margin-left: 15%;
+    display: flex;
+    align-items: center;
+    top: 18px;
+    transform: rotate(0);
+    transition: 1s;
+}
+.hamburger-menu.active .hamburger-icon{
+    transform: rotate(315deg);
+
+}
+
+.hamburger-icon span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 11px;
+    background: linear-gradient(45deg, rgb(0, 174, 255), black);
+    border: 1px solid rgb(0, 174, 255);
+    border-radius: 30px;
+    box-shadow: 
+        0 0 5px rgb(0, 174, 255),
+        0 0 10px rgb(0, 174, 255);
+    transition: .3s;
+    transition-delay: 1s;
+}
+.hamburger-icon span:nth-child(1){
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 60%;
+    transform: translateY(0);
+}
+.hamburger-menu.active span:nth-child(1){
+    
+    width: 100%;
+    transform: translateY(25px);
+    transition-delay: 0s;
+}
+.hamburger-icon span:nth-child(2){
+    width: 100%;
+    transform: scaleX(1);
+    opacity: 1;
+    
+}
+.hamburger-menu.active span:nth-child(2){
+    transform: scaleX(0);
+    opacity: 0;
+    transition-delay: 0s;
+}
+.hamburger-icon span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 60%;
+    transform: rotate(0);
+}
+.hamburger-menu.active span:nth-child(3){
+    bottom: 30px;
+    width: 100%;
+    transform: rotate(90deg);
+    transition-delay: 0s;
+} 
+.menu1{ 
+    display: none;
+}
+ 
+/* tablette */
+@media screen and (max-width: 1400px) {  
+    nav{
+        width: 100%;
+        height: 100px;
+        background-color: rgb(71, 23, 80);
+        border-radius: 0 0 30px 30px;
+    
+    }
+    .logo{ 
+        margin-top: 10px;
+        margin-left: 40%;
+        width: 12pc;
+    }
+     .hamburger-menu{ 
+        display: block;  
+        box-shadow: 
+        0 0 2px rgb(0, 174, 255),
+        0 0 4px rgb(0, 174, 255),
+        0 0 8px rgb(0, 174, 255),
+        0 0 16px rgb(0, 174, 255); 
+        right: 20px;
+        width: 80px;
+        height: 80px; 
+        top: 10px; 
+    }
+    .hamburger-icon{
+        position: relative;
+        width: 55px;
+        height: 50px;
+        margin-left: 12%; 
+        top: 13px; 
+    }  
+    .hamburger-icon span{ 
+        
+        width: 100%;
+        height: 8px; 
+    }  
+    .hamburger-menu.active span:nth-child(3){
+        bottom: 17px; 
+    }
+    .menu{ 
+        width: 100%; 
+        height: 100vh;
+        background-color: rgba(143, 6, 255, 0.623); 
+        backdrop-filter: blur(13px);
+        position: fixed;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+        margin-left:  -100%;
+        transition: all 0.7s ease ;
+    } 
+    .menu.mobile-menu{ 
+        margin-left: 0%;
+     
+    }
+    nav ul li{ 
+        margin:10% 0; 
+        line-height: 0px;
+    } 
+    nav ul li a{ 
+        font-size: 25px; 
+        letter-spacing: 2px;
+    } 
+    .men{  
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;  
+        margin-top: -20%;
+    }
+    .menu1{ 
+        display: block;  
+        position: absolute; 
+        bottom: 5%;
+    } 
+    .menu1 p{ 
+        color: white;
+        font-size: 27px;
+    } 
+    .menu2{ 
+        margin-top:5%; 
+    }
+    .menu2 img{ 
+        width: 45px; 
+        margin-left: 5%;
+    } 
+}
+ 
+
+ 
+@media screen and (max-width: 900px){
+    .logo{ 
+        margin-top: 10px;
+        width: 170px;
+        margin-left: 37%;
+    }
+    nav ul li{
+        margin:  10% 0 ; 
+    } 
+    nav ul li a{ 
+        font-size:18px;
+    }  
+    .hamburger-menu{  
+        right: 20px;
+        width: 60px;
+        height: 60px; 
+        top: 20px; 
+        border-radius: 10px;
+    }
+    .hamburger-icon{
+        position: relative;
+        width: 45px;
+        height: 45px;
+        margin-left: 10%; 
+        top: 6px; 
+    }  
+    .hamburger-icon span{ 
+        box-shadow: 
+        0 0 2px rgb(0, 174, 255),
+        0 0 4px rgb(0, 174, 255);
+        width: 100%;
+        height: 7px; 
+    }  
+    .hamburger-menu.active span:nth-child(1){
+        transform: translateY(20px);
+    }
+    .hamburger-menu.active span:nth-child(3){
+        left: 0px;
+        bottom: 16px; 
+    } 
+    .men{   
+        margin-top: -28%;
+    }
+    .menu1{ 
+        display: block;  
+        position: absolute; 
+        bottom: 5%;
+    } 
+    .menu1 p{ 
+        color: white;
+        font-size: 24px;
+    } 
+    .menu2{ 
+        margin-top:5%; 
+    }
+    .menu2 img{ 
+        width: 40px; 
+        margin-left: 4%;
+    } 
+}
+/* telephone */ 
+@media screen and (max-width: 500px){ 
+    nav{
+        width: 100%;
+        height: 80px;
+        background-color: rgb(71, 23, 80);
+        border-radius: 0 0 20px 20px; 
+    }
+    .logo{ 
+        margin-top: 10px;
+        width:110px;
+        margin-left: 33%;
+    }
+    nav ul li{
+        margin:  10% 0 ;  
+    } 
+    nav ul li a{ 
+        font-size:16px; 
+        letter-spacing: 1.5px;
+    }  
+    .hamburger-menu{  
+        right: 10px;
+        width: 45px;
+        height: 45px; 
+        top: 20px; 
+        border-radius: 10px; 
+        box-shadow: 
+        0 0 2px rgb(0, 174, 255),
+        0 0 4px rgb(0, 174, 255),
+        0 0 8px rgb(0, 174, 255),
+        0 0 16px rgb(0, 174, 255);
+    }
+    .hamburger-icon{
+        position: relative;
+        width: 35px;
+        height:34px;
+        margin-left: 8%; 
+        top: 6px; 
+    }  
+    .hamburger-icon span{ 
+        box-shadow: 
+        0 0 2px rgb(0, 174, 255),
+        0 0 4px rgb(0, 174, 255);
+        width: 100%;
+        height: 5px; 
+    }  
+    .hamburger-menu.active span:nth-child(1){
+        transform: translateY(13px);
+    }
+    .hamburger-menu.active span:nth-child(3){
+        left: 0px;
+        bottom: 14px; 
+    } 
+    .men{
+        margin-top: -60%;
+    }
+    .menu1{ 
+        display: block;  
+        position: absolute; 
+        bottom: 5%;
+    } 
+    .menu1 p{ 
+        color: white;
+        font-size: 20px;
+    } 
+    .menu2{ 
+        margin-top:5%; 
+    }
+    .menu2 img{ 
+        width: 36px; 
+        margin-left: 4%;
+    } 
+} 
+@media screen and (max-width: 370px){ 
+    nav{
+        width: 100%;
+        height: 60px;
+        background-color: rgb(71, 23, 80);
+        border-radius: 0 0 20px 20px; 
+    }
+    .logo{ 
+        margin-top: 5px;
+        width:90px;
+        margin-left: 30%;
+    }
+    nav ul li{
+        margin:  10% 0 ; 
+    } 
+    nav ul li a{ 
+        font-size:15px; 
+        letter-spacing: 0.5px;
+    } 
+    .hamburger-menu{  
+        right: 5px;
+        width: 35px;
+        height: 35px; 
+        top: 10px; 
+        border-radius: 8px; 
+        box-shadow: 
+        0 0 1px rgb(0, 174, 255),
+        0 0 2px rgb(0, 174, 255),
+        0 0 4px rgb(0, 174, 255),
+        0 0 8px rgb(0, 174, 255);
+    }
+    .hamburger-icon{
+        position: relative;
+        width: 27px;
+        height:27px;
+        margin-left: 8%; 
+        top: 4px; 
+    }  
+    .hamburger-icon span{ 
+        box-shadow: 
+        0 0 1px rgb(0, 174, 255),
+        0 0 2px rgb(0, 174, 255);
+        width: 100%;
+        height: 3.5px; 
+    }  
+    .hamburger-menu.active span:nth-child(1){
+        transform: translateY(11px);
+    }
+    .hamburger-menu.active span:nth-child(3){
+        left: 0px;
+        bottom: 11px; 
+    } 
+    .men{
+        margin-top: -70%;
+    }
+    .menu1{ 
+        display: block;  
+        position: absolute; 
+        bottom: 5%;
+    } 
+    .menu1 p{ 
+        color: white;
+        font-size: 15px;
+    } 
+    .menu2{ 
+        margin-top:5%; 
+    }
+    .menu2 img{ 
+        width: 30px; 
+        margin-left: 2%;
+    } 
+}
+ 
+/* corp */
+.corp h3{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+}
+.corp h3 a{
+    color: blue;
+    text-decoration: underline;
+}
+
+.corp h1{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+} 
+/* tablette */
+@media screen and (max-width: 1400px){
+    .corp h3{
+        font-size: 23px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px 40px; 
+        margin-left: -2%;
+    }
+    .corp h3 a{
+        color: blue;
+        text-decoration: underline;
+    }
+    
+    .corp h1{
+        font-size: 35px;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 80px;
+    } 
+} 
+@media screen and (max-width: 900px){
+    .corp h3{
+        font-size: 16px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px 40px; 
+        margin-left: -2%;
+    }
+    .corp h3 a{
+        color: blue;
+        text-decoration: underline;
+    }
+    
+    .corp h1{
+        font-size: 30px;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 80px;
+    } 
+}
+/* telephone */ 
+@media screen and (max-width: 500px){
+    .corp h3{
+        font-size: 11px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        padding: 10px 40px; 
+        margin-left: -8%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .corp h3 a{
+        color: blue;
+        text-decoration: underline;
+    }
+    
+    .corp h1{
+        font-size: 17px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 60px;
+    } 
+}
+@media screen and (max-width: 370px){
+    .corp h3{
+        font-size:8px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        padding: 10px 40px; 
+        margin-left: -11%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .corp h3 a{
+        color: blue;
+        text-decoration: underline;
+    }
+    
+    .corp h1{
+        font-size: 14px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    } 
+}
+/* corp1 */
+ 
+.corp1{ 
+    background-color:  rgb(71, 23, 80);
+    border-radius: 50px 50px 0 0; 
+    padding: 50px 10%;
+}
+.corp11{  
+    padding: 2pc 5pc ;
+    background-color: rgb(194, 194, 194);
+    border-radius: 80px; 
+    margin-top: 1%;
+}
+.corp111{   
+    display: flex;
+} 
+.corp111 img{ 
+    width: 30pc; 
+    height: 30pc; 
+    border-radius: 50px 10px 10px 50px; 
+    margin-right: 8pc;
+} 
+.corp1111 h3{ 
+    margin-bottom: 30px; 
+    text-align: center;
+}
+.corp1111 h3 a{ 
+    color: black; 
+    background-color: yellow; 
+    font-size: 30px; 
+    border-radius: 20px; 
+    padding: 10px 10px; 
+    
+} 
+.corp1111 h2{ 
+    font-size: 60px; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+
+} 
+.corp11111 { 
+    display: flex;
+} 
+.a1{ 
+    font-size: 27px; 
+    margin-top: 40px; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    letter-spacing: 3px;
+}
+.corp11111 p{ 
+    margin-top: 60px;
+} 
+
+.b1{ 
+    font-size:30px; 
+    color: black; 
+    background-color: rgb(98, 255, 58); 
+    border-radius: 10px; 
+    padding: 20px 10px; 
+    letter-spacing: 3px;
+}
+.b2{
+    font-size:30px; 
+    color: black; 
+    background-color: rgb(88, 255, 247); 
+    border-radius: 10px; 
+    padding: 20px 10px;  
+    margin-left: 50px;
+    letter-spacing: 3px;
+}
+
+/* tablette */
+@media screen and (max-width: 2170px){ 
+    .corp1{  
+        border-radius: 40px 40px 0 0; 
+        padding: 50px 10%;
+    }
+    .corp11{  
+        padding: 1.5pc 3pc ; 
+        border-radius: 40px; 
+        margin-top: 1%;
+    } 
+    .corp111 img{ 
+        width: 27pc; 
+        height: 27pc; 
+        border-radius: 40px 10px 10px 40px; 
+        margin-right: 5pc;
+    } 
+    .corp1111 h3{ 
+        margin-bottom: 30px; 
+        text-align: center;
+    }
+    .corp1111 h3 a{ 
+        color: black; 
+        background-color: yellow; 
+        font-size: 25px; 
+        border-radius: 15px; 
+        padding: 10px 10px; 
+        
+    } 
+    .corp1111 h2{ 
+        font-size: 50px;   
+    }  
+    .a1{ 
+        font-size: 25px; 
+        margin-top: 30px;  
+        letter-spacing: 2px;
+    }
+    .corp11111 p{ 
+        margin-top: 60px;
+    } 
+    
+    .b1{ 
+        font-size:25px;  
+        border-radius: 10px; 
+        padding: 15px 10px; 
+        letter-spacing: 2px;
+    }
+    .b2{
+        font-size:25px;  
+        border-radius: 10px; 
+        padding: 15px 10px;  
+        margin-left: 30px;
+        letter-spacing: 2px;
+    }
+} 
+@media screen and (max-width: 1770px){ 
+    .corp1{  
+        border-radius: 40px 40px 0 0; 
+        padding: 35px 10%;
+    }
+    .corp11{  
+        padding: 1pc 2pc ; 
+        border-radius: 40px; 
+        margin-top: 1%;
+    } 
+    .corp111 img{ 
+        width: 22pc; 
+        height: 22pc; 
+        border-radius: 40px 10px 10px 40px; 
+        margin-right: 3pc;
+    } 
+    .corp1111 h3{ 
+        margin-bottom: 15px; 
+        text-align: center;
+    }
+    .corp1111 h3 a{ 
+        color: black; 
+        background-color: yellow; 
+        font-size: 20px; 
+        border-radius: 10px; 
+        padding: 8px 8px; 
+        
+    } 
+    .corp1111 h2{ 
+        font-size: 40px;   
+    }  
+    .a1{ 
+        font-size: 23px; 
+        margin-top: 30px;  
+        letter-spacing: 2px;
+    }
+    .corp11111 p{ 
+        margin-top: 40px;
+    } 
+    
+    .b1{ 
+        font-size:23px;  
+        border-radius: 10px; 
+        padding: 15px 10px; 
+        letter-spacing: 2px;
+    }
+    .b2{
+        font-size:23px;  
+        border-radius: 10px; 
+        padding: 15px 10px;  
+        margin-left: 30px;
+        letter-spacing: 2px;
+    }
+}
+@media screen and (max-width: 1400px){ 
+    .corp1{  
+        border-radius: 30px 30px 0 0; 
+        padding: 30px 10%;
+    }
+    .corp11{  
+        padding: 10px 20px ; 
+        border-radius: 30px; 
+        margin-top: 1%;
+    } 
+    .corp111 img{ 
+        width: 13pc; 
+        height:13pc; 
+        border-radius: 30px 10px 10px 30px; 
+        margin-right: 1.5pc;
+    } 
+    .corp1111 h3{ 
+        margin-bottom: 5px; 
+        text-align: center;
+    }
+    .corp1111 h3 a{ 
+        color: black; 
+        background-color: yellow; 
+        font-size: 12px; 
+        border-radius: 10px; 
+        padding: 6px 6px; 
+        
+    } 
+    .corp1111 h2{ 
+        font-size: 27px;   
+    }  
+    .a1{ 
+        font-size: 14px; 
+        margin-top: 10px;  
+        letter-spacing: 1.5px;
+    }
+    .corp11111 p{ 
+        margin-top: 20px;
+    } 
+    
+    .b1{ 
+        font-size:14px;  
+        border-radius: 10px; 
+        padding: 10px 10px; 
+        letter-spacing: 2px;
+    }
+    .b2{
+        font-size:14px;  
+        border-radius: 10px; 
+        padding: 10px 10px;  
+        margin-left: 20px;
+        letter-spacing: 2px;
+    }
+}
+@media screen and (max-width: 900px){ 
+    .corp1{  
+        border-radius: 30px 30px 0 0; 
+        padding: 20px 10%;
+    }
+    .corp11{  
+        padding: 8px 15px ; 
+        border-radius: 30px; 
+        margin-top: 4%;
+    } 
+    .corp111 img{ 
+        width: 8pc; 
+        height:8pc; 
+        border-radius: 30px 7px 7px 30px; 
+        margin-right: 1pc;
+    } 
+    .corp1111 h3{ 
+        margin-bottom: 0px; 
+        text-align: center;
+    }
+    .corp1111 h3 a{ 
+        color: black; 
+        background-color: yellow; 
+        font-size: 8px; 
+        border-radius: 6px; 
+        padding: 3px 4px; 
+        
+    } 
+    .corp1111 h2{ 
+        font-size: 14px;   
+    }  
+    .a1{ 
+        font-size:7px; 
+        margin-top: 10px;  
+        letter-spacing: 1.5px;
+    }
+    .corp11111 p{ 
+        margin-top: 10px;
+    } 
+    
+    .b1{ 
+        font-size:6px;  
+        border-radius: 6px; 
+        padding: 5px 3px; 
+        letter-spacing: 2px;
+    }
+    .b2{
+        font-size:6px;  
+        border-radius: 6px; 
+        padding: 5px 3px;  
+        margin-left: 6px;
+        letter-spacing: 2px;
+    }
+}
+@media screen and (max-width: 500px){ 
+    .corp1{  
+        border-radius: 20px 20px 0 0; 
+        padding: 15px 10%;
+    }
+    .corp11{  
+        padding: 6px 8px ; 
+        border-radius: 20px; 
+        margin-top: 2%;
+    } 
+    .corp111 img{ 
+        width: 5.1pc; 
+        height: 5.1pc; 
+        border-radius: 20px 5px 5px 20px; 
+        margin-right: 0.5pc;
+    } 
+    .corp1111 h3{ 
+        margin-top: -10px;
+        margin-bottom: 0px; 
+        text-align: center;
+    }
+    .corp1111 h3 a{ 
+        color: black; 
+        background-color: yellow; 
+        font-size: 6px; 
+        border-radius: 4px; 
+        padding: 3px 4px; 
+        
+    } 
+    .corp1111 h2{ 
+        font-size: 11.2px;   
+    }  
+    .a1{ 
+        font-size:5.2px; 
+        margin-top: 3px;  
+        letter-spacing: 0.5px;
+    }
+    .corp11111 p{ 
+        margin-top: 0px;
+    } 
+    
+    .b1{ 
+        font-size:5.2px;  
+        border-radius: 4px; 
+        padding: 3px 2px; 
+        letter-spacing: 1px;
+    }
+    .b2{
+        font-size:5.2px;  
+        border-radius: 4px; 
+        padding: 3px 2px;  
+        margin-left: 3px;
+        letter-spacing: 0.7px;
+    }
+}
+
+@media screen and (max-width: 350px){ 
+    .corp1{  
+        border-radius: 20px 20px 0 0; 
+        padding: 15px 10%;
+    }
+    .corp11{  
+        padding: 6px 8px ; 
+        border-radius: 15px;
+        margin-top: 2%;
+    } 
+    .corp111 img{ 
+        width: 4.2pc; 
+        height: 4.8pc; 
+        border-radius: 10px 2px 2px 10px; 
+        margin-right: 0.3pc;
+    } 
+    .corp1111 h3{ 
+        margin-top: -10px;
+        margin-bottom: 0px; 
+        text-align: center;
+    }
+    .corp1111 h3 a{ 
+        color: black; 
+        background-color: yellow; 
+        font-size: 4px; 
+        border-radius: 4px; 
+        padding: 3px 3px; 
+        
+    } 
+    .corp1111 h2{ 
+        font-size: 11.2px;   
+    }  
+    .a1{ 
+        font-size:4.8px; 
+        margin-top: 3px;  
+        letter-spacing: 0.5px;
+    }
+    .corp11111 p{ 
+        margin-top: 0px;
+    } 
+    
+    .b1{ 
+        font-size:4.5px;  
+        border-radius: 2px; 
+        padding: 2px 1px; 
+        letter-spacing: 1px;
+    }
+    .b2{
+        font-size:4.5px;  
+        border-radius: 2px; 
+        padding: 2px 1px;  
+        margin-left: 2px;
+        letter-spacing: 0.7px;
+    }
+}
+
+
+.point{color: rgb(71, 23, 80);}
+.end{margin-bottom: 70vh; color: rgb(71, 23, 80);}
+
+
+
+
+
+
+
