@@ -146,62 +146,67 @@ nav ul li a:hover:before{
 }
 div.menu1{ 
     display: none;
+}   
+
+
+
+.texte1 h1{
+    display: inline-block; 
+    vertical-align: top;
 }  
-
-
-/* .auto-typing::before{
-    content: "Vivre!";
-    color: yellow; 
-    animation: words 20s infinite;
+.animated-text{
+    display: inline-block; 
+    height: 60px;
+    overflow: hidden;
+    color: yellow;
 }
-.auto-typing::after{
+.animated-text div{
+    animation: 8s wordChange;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1); 
+ }
+.animated-text span{
+    position: relative; 
+    font-size: 60px; 
+    left: 2%; 
+    display: block;
+}
+.animated-text span::after{
     content: "";
     position: absolute;
-    width: calc(10% + 8px);
-    height:  10%;
-    background-color: rgba(240, 248, 255, 0);
-    border-left: 8px solid yellow;
-    right:  2px;
-    animation: cursor .8s infinite, typing 20s steps(14) infinite; 
+    left: 0;
+    height: 100%; 
+    
 }
-@keyframes cursor {
-    to{
-        border-left: 2px solid rgba(240, 248, 255, 0); 
-    } 
-
-}
-@keyframes words {
-    0%,20%{
-        content: "Rire!";
+@keyframes textType{
+    0%{
+        left: 0;
     }
-    21%,40%{
-        content: "Vous amusez!";
+    50%{
+        left: 100%;
     }
-    41%,60%{
-        content: "Expérimenter!";
-    }
-    61%,80%{
-        content: "Jouer!";
-    }
-    81%,100%{
-        content: "Danser!";
+    100%{
+        left: 0;
     } 
 
 }
 
-@keyframes typing{
-    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
-        width: 0;
+@keyframes wordChange{
+    0%{
+        margin-top: 0;
     }
-    5%,20%,25%,40%,45%,60%,65%,80%,85%{
-        width: calc(100% + 8px);
+    33.333%{
+        margin-top: -68px;
     }
+    66.666%{
+        margin-top: -138px;
+    }
+    100%{
+        margin-top: 0;
+    } 
 
-} */
-
-
-
-
+}
+ 
  
  
 @media screen and (max-width: 1100px) { 
@@ -458,8 +463,8 @@ div.menu1{
     
 }
 .texte1 h1{
-    font-size: 60px; 
-    margin-bottom: 70px;
+    font-size: 60px;    
+    margin-bottom: 70px; 
 }
 .texte1 p{
     font-size: 17px;
