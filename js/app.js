@@ -59,15 +59,7 @@ function showSlider(type){
  
 
 
-let typed = new typed('.auto-typing',{
-    Strings: ['vivre!', 'rire!', 'partager!', 'expérimente!' ],
-    typeSpeed: 100,
-    backSpeed: 100,
-    loop: true,
-    fadeOut: true,
-    fadeOutClass: 'typed-fade-out',
-    fadeOutDelay: 500
-})
+ 
 
  
 

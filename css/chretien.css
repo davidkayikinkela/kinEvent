@@ -14,43 +14,45 @@ body{
 }
 nav{
     width: 100%;
-    height: 140px;
+    height: 110px;
     background-color: rgb(71, 23, 80);
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 30px 30px;  
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 
 }
 .logo{
-    width: 300px;
-    position: absolute;
-    top: 7px;
-    left: 4%;
+    width: 190px; 
+    margin: 20px 50px;
 }
-nav ul{
-    float: right;
-    margin-right: 25px;
+.menu{
+   display: flex;
+}
+.men {
+   display: flex;
 }
 nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 15px;
-    
-    
+    margin: 0 10px; 
+    margin-top: 20px;
 }
 nav ul li a{
     position: relative;
     color: rgb(255, 255, 255);
-    font-size: 26px;
-    padding: 5px 0;
+    font-size: 17px;
+    padding: 2px 0;
     text-transform: uppercase;
-    top: 28px;
+    top: 28px; 
+    /* display: none; */
+
 }
 nav ul li a::before{
     position: absolute;
     content: '';
     left: 0;
     bottom: 0;
-    height: 4px;
-    width: 100%;  
+    height: 2.5px;
+    width: 100%; 
     background-color: rgb(218, 49, 49);
     transform: scaleX(0);
     transform-origin: right;
@@ -59,34 +61,37 @@ nav ul li a::before{
 nav ul li a:hover:before{
     transform: scaleX(1);
     transform-origin: left;
-} 
+}
+
 .hamburger-menu{  
     display: none;
     position: absolute; 
     right: 20px;
-    width: 110px;
-    height: 110px;
+    width: 60px;
+    height: 60px;
     background-color: black;
     box-shadow: 
         0 0 5px rgb(0, 174, 255),
         0 0 10px rgb(0, 174, 255),
         0 0 20px rgb(0, 174, 255),
         0 0 40px rgb(0, 174, 255);
-    border-radius: 20px;
+    border-radius: 15px;
     cursor: pointer;
-    top: 10px; 
+    top: 20px; 
+    z-index: 111;
 }
 .hamburger-icon{
     position: relative;
-    width: 80px;
-    height: 70px;
-    margin-left: 15%;
+    width: 46px;
+    height: 40px;
+    margin-left: 10%;
     display: flex;
     align-items: center;
-    top: 18px;
+    top: 10px;
     transform: rotate(0);
     transition: 1s;
 }
+.hamburger-menu.active{position: fixed;}
 .hamburger-menu.active .hamburger-icon{
     transform: rotate(315deg);
 
@@ -96,7 +101,7 @@ nav ul li a:hover:before{
     position: absolute;
     display: block;
     width: 100%;
-    height: 11px;
+    height: 5px;
     background: linear-gradient(45deg, rgb(0, 174, 255), black);
     border: 1px solid rgb(0, 174, 255);
     border-radius: 30px;
@@ -113,8 +118,8 @@ nav ul li a:hover:before{
     width: 60%;
     transform: translateY(0);
 }
-.hamburger-menu.active span:nth-child(1){
-    
+.hamburger-menu.active span:nth-child(1){ 
+    top: -8px;
     width: 100%;
     transform: translateY(25px);
     transition-delay: 0s;
@@ -136,61 +141,43 @@ nav ul li a:hover:before{
     width: 60%;
     transform: rotate(0);
 }
-.hamburger-menu.active span:nth-child(3){
-    bottom: 30px;
+.hamburger-menu.active span:nth-child(3){ 
+    left:-1px ;
+    bottom: 17px;
     width: 100%;
     transform: rotate(90deg);
     transition-delay: 0s;
-} 
-.menu1{ 
+}
+div.menu1{ 
     display: none;
 }
  
-/* tablette */
-@media screen and (max-width: 1400px) {  
-    nav{
-        width: 100%;
-        height: 100px;
-        background-color: rgb(71, 23, 80);
-        border-radius: 0 0 30px 30px;
-    
-    }
+@media screen and (max-width: 1100px) { 
     .logo{ 
-        margin-top: 10px;
-        margin-left: 40%;
-        width: 12pc;
+        margin: 20px 30px;
+        width: 150px;
     }
-     .hamburger-menu{ 
-        display: block;  
-        box-shadow: 
-        0 0 2px rgb(0, 174, 255),
-        0 0 4px rgb(0, 174, 255),
-        0 0 8px rgb(0, 174, 255),
-        0 0 16px rgb(0, 174, 255); 
-        right: 20px;
-        width: 80px;
-        height: 80px; 
-        top: 10px; 
-    }
-    .hamburger-icon{
-        position: relative;
-        width: 55px;
-        height: 50px;
-        margin-left: 12%; 
-        top: 13px; 
+    nav ul li{ 
+        margin:0 7px ; 
+        margin-top:  20px;
     }  
-    .hamburger-icon span{ 
-        
-        width: 100%;
-        height: 8px; 
-    }  
-    .hamburger-menu.active span:nth-child(3){
-        bottom: 17px; 
+    nav ul li a{ 
+        font-size: 15px;
+    } 
+    
+ 
+}
+/* tablette */  
+@media screen and (max-width: 830px){ 
+    .logo{  
+        margin-left: 42%;
+        margin-top: 30px ;
+        width: 130px;
     }
     .menu{ 
         width: 100%; 
         height: 100vh;
-        background-color: rgba(143, 6, 255, 0.623); 
+        background-color: rgba(143, 6, 255, 0.979); 
         backdrop-filter: blur(13px);
         position: fixed;
         display: flex; 
@@ -198,70 +185,87 @@ nav ul li a:hover:before{
         justify-content: center;
         flex-direction: column; 
         margin-left:  -100%;
-        transition: all 0.7s ease ;
+        transition: all 0.7s ease ; 
+        z-index: 110;
+    }  
+    nav ul li{
+        margin:  20px 0 ; 
+    } 
+    nav ul li a{ 
+        font-size:25px;
+    } 
+    .hamburger-menu{ 
+        display: block;  
+        box-shadow: 
+        0 0 2px rgb(0, 174, 255),
+        0 0 4px rgb(0, 174, 255),
+        0 0 8px rgb(0, 174, 255),
+        0 0 16px rgb(0, 174, 255);
     } 
     .menu.mobile-menu{ 
         margin-left: 0%;
      
-    }
-    nav ul li{ 
-        margin:10% 0; 
-        line-height: 0px;
-    } 
-    nav ul li a{ 
-        font-size: 25px; 
-        letter-spacing: 2px;
+    }    
+    .nos{ 
+        color: rgb(255, 218, 218);
     } 
     .men{  
         display: flex; 
         align-items: center;
         justify-content: center;
         flex-direction: column;  
-        margin-top: -20%;
+        margin-top: -40%;
     }
-    .menu1{ 
+    div.menu1{ 
         display: block;  
         position: absolute; 
         bottom: 5%;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
     } 
     .menu1 p{ 
         color: white;
-        font-size: 27px;
+        font-size: 30px;
     } 
     .menu2{ 
         margin-top:5%; 
     }
     .menu2 img{ 
         width: 45px; 
-        margin-left: 5%;
+        margin-left:15px;
     } 
 }
- 
-
- 
-@media screen and (max-width: 900px){
+/* phone */
+@media screen and (max-width: 500px){ 
+    nav{ 
+        height: 80px; 
+        border-radius: 0 0 30px 30px;   
+    
+    }
     .logo{ 
-        margin-top: 10px;
-        width: 170px;
-        margin-left: 37%;
+        margin-top: 20px;
+        width: 90px;
+        margin-left: 40%;
     }
     nav ul li{
-        margin:  10% 0 ; 
+        margin:  22px 0 ; 
     } 
     nav ul li a{ 
         font-size:18px;
-    }  
+    } 
     .hamburger-menu{  
-        right: 20px;
-        width: 60px;
-        height: 60px; 
-        top: 20px; 
+        right: 10px;
+        width: 40px;
+        height: 40px; 
+        top: 15px; 
         border-radius: 10px;
     }
     .hamburger-icon{
         position: relative;
-        width: 45px;
-        height: 45px;
+        width: 30px;
+        height: 28px;
         margin-left: 10%; 
         top: 6px; 
     }  
@@ -270,95 +274,31 @@ nav ul li a:hover:before{
         0 0 2px rgb(0, 174, 255),
         0 0 4px rgb(0, 174, 255);
         width: 100%;
-        height: 7px; 
+        height: 3.5px; 
     }  
     .hamburger-menu.active span:nth-child(1){
-        transform: translateY(20px);
-    }
+        transform: translateY(12px);
+        top: 0px;
+    }  
     .hamburger-menu.active span:nth-child(3){
         left: 0px;
-        bottom: 16px; 
+        bottom: 10.2px; 
     } 
-    .men{   
-        margin-top: -28%;
+    .men{  
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;  
+        margin-top: -40%;
     }
-    .menu1{ 
+    div.menu1{ 
         display: block;  
         position: absolute; 
         bottom: 5%;
-    } 
-    .menu1 p{ 
-        color: white;
-        font-size: 24px;
-    } 
-    .menu2{ 
-        margin-top:5%; 
-    }
-    .menu2 img{ 
-        width: 40px; 
-        margin-left: 4%;
-    } 
-}
-/* telephone */ 
-@media screen and (max-width: 500px){ 
-    nav{
-        width: 100%;
-        height: 80px;
-        background-color: rgb(71, 23, 80);
-        border-radius: 0 0 20px 20px; 
-    }
-    .logo{ 
-        margin-top: 10px;
-        width:110px;
-        margin-left: 33%;
-    }
-    nav ul li{
-        margin:  10% 0 ;  
-    } 
-    nav ul li a{ 
-        font-size:16px; 
-        letter-spacing: 1.5px;
-    }  
-    .hamburger-menu{  
-        right: 10px;
-        width: 45px;
-        height: 45px; 
-        top: 20px; 
-        border-radius: 10px; 
-        box-shadow: 
-        0 0 2px rgb(0, 174, 255),
-        0 0 4px rgb(0, 174, 255),
-        0 0 8px rgb(0, 174, 255),
-        0 0 16px rgb(0, 174, 255);
-    }
-    .hamburger-icon{
-        position: relative;
-        width: 35px;
-        height:34px;
-        margin-left: 8%; 
-        top: 6px; 
-    }  
-    .hamburger-icon span{ 
-        box-shadow: 
-        0 0 2px rgb(0, 174, 255),
-        0 0 4px rgb(0, 174, 255);
-        width: 100%;
-        height: 5px; 
-    }  
-    .hamburger-menu.active span:nth-child(1){
-        transform: translateY(13px);
-    }
-    .hamburger-menu.active span:nth-child(3){
-        left: 0px;
-        bottom: 14px; 
-    } 
-    .men{
-        margin-top: -60%;
-    }
-    .menu1{ 
-        display: block;  
-        position: absolute; 
-        bottom: 5%;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
     } 
     .menu1 p{ 
         color: white;
@@ -368,46 +308,40 @@ nav ul li a:hover:before{
         margin-top:5%; 
     }
     .menu2 img{ 
-        width: 36px; 
-        margin-left: 4%;
+        width: 30px; 
+        margin-left:10px;
     } 
-} 
-@media screen and (max-width: 370px){ 
-    nav{
-        width: 100%;
-        height: 60px;
-        background-color: rgb(71, 23, 80);
-        border-radius: 0 0 20px 20px; 
+}
+
+@media screen and (max-width: 350px){
+    nav{ 
+        height: 70px; 
+        border-radius: 0 0 30px 30px;   
+    
     }
     .logo{ 
-        margin-top: 5px;
-        width:90px;
-        margin-left: 30%;
+        margin-top: 15px;
+        width: 85px;
+        margin-left: 35%;
     }
     nav ul li{
-        margin:  10% 0 ; 
+        margin:  18px 0 ; 
     } 
     nav ul li a{ 
-        font-size:15px; 
-        letter-spacing: 0.5px;
+        font-size:15px;
     } 
     .hamburger-menu{  
         right: 5px;
-        width: 35px;
-        height: 35px; 
-        top: 10px; 
-        border-radius: 8px; 
-        box-shadow: 
-        0 0 1px rgb(0, 174, 255),
-        0 0 2px rgb(0, 174, 255),
-        0 0 4px rgb(0, 174, 255),
-        0 0 8px rgb(0, 174, 255);
+        width: 31px;
+        height: 31px; 
+        top: 15px; 
+        border-radius: 7px;
     }
     .hamburger-icon{
         position: relative;
-        width: 27px;
-        height:27px;
-        margin-left: 8%; 
+        width: 25px;
+        height: 23px;
+        margin-left: 6%; 
         top: 4px; 
     }  
     .hamburger-icon span{ 
@@ -415,41 +349,48 @@ nav ul li a:hover:before{
         0 0 1px rgb(0, 174, 255),
         0 0 2px rgb(0, 174, 255);
         width: 100%;
-        height: 3.5px; 
+        height: 2.5px; 
     }  
     .hamburger-menu.active span:nth-child(1){
-        transform: translateY(11px);
+        transform: translateY(9.5px);
     }
     .hamburger-menu.active span:nth-child(3){
         left: 0px;
-        bottom: 11px; 
+        bottom: 9px; 
     } 
-    .men{
-        margin-top: -70%;
+    .men{  
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;  
+        margin-top: -40%;
     }
-    .menu1{ 
+    div.menu1{ 
         display: block;  
         position: absolute; 
         bottom: 5%;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
     } 
     .menu1 p{ 
         color: white;
-        font-size: 15px;
+        font-size: 18px;
     } 
     .menu2{ 
         margin-top:5%; 
     }
     .menu2 img{ 
-        width: 30px; 
-        margin-left: 2%;
+        width: 27px; 
+        margin-left:8px;
     } 
 }
 
-
 /* corp */
 .corp h3{
-    font-size: 30px;
-    margin-top: 20px;
+    font-size: 18px;
+    margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px 40px;
 }
@@ -459,15 +400,36 @@ nav ul li a:hover:before{
 }
 
 .corp h1{
-    font-size: 40px;
+    font-size:30px;
     text-align: center;
     margin-top: 50px;
     margin-bottom: 100px;
-} 
+}
+ 
+@media screen and (max-width: 1100px){
+    .corp h3{
+        font-size: 17px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px 40px; 
+        margin-left: -2%;
+    }
+    .corp h3 a{
+        color: blue;
+        text-decoration: underline;
+    }
+    
+    .corp h1{
+        font-size: 28px;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+}     
 /* tablette */
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 830px){
     .corp h3{
-        font-size: 23px;
+        font-size: 17px;
         margin-top: 10px;
         margin-bottom: 10px;
         padding: 10px 40px; 
@@ -479,36 +441,17 @@ nav ul li a:hover:before{
     }
     
     .corp h1{
-        font-size: 35px;
+        font-size: 28px;
         text-align: center;
         margin-top: 40px;
         margin-bottom: 80px;
-    } 
-} 
-@media screen and (max-width: 900px){
-    .corp h3{
-        font-size: 16px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding: 10px 40px; 
-        margin-left: -2%;
     }
-    .corp h3 a{
-        color: blue;
-        text-decoration: underline;
-    }
-    
-    .corp h1{
-        font-size: 30px;
-        text-align: center;
-        margin-top: 40px;
-        margin-bottom: 80px;
-    } 
+     
 }
 /* telephone */ 
 @media screen and (max-width: 500px){
     .corp h3{
-        font-size: 11px;
+        font-size: 10px;
         margin-top: 0px;
         margin-bottom: 10px;
         padding: 10px 40px; 
@@ -525,33 +468,18 @@ nav ul li a:hover:before{
         text-align: center;
         margin-top: 30px;
         margin-bottom: 60px;
-    } 
-}
-@media screen and (max-width: 370px){
-    .corp h3{
-        font-size:8px;
-        margin-top: 0px;
+    }
+    .corp h2{
+        margin-left: 5%;
+        font-size: 17px;
+        margin-top: 10px;
         margin-bottom: 10px;
-        padding: 10px 40px; 
-        margin-left: -11%;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-    .corp h3 a{
-        color: blue;
-        text-decoration: underline;
-    }
-    
-    .corp h1{
-        font-size: 14px;
-        text-align: center;
-        margin-top: 30px;
-        margin-bottom: 40px;
     } 
 }
 /* corp1 */
 .corp1 h2{
-    margin-top: 20%;
-    font-size: 30px; 
+    margin-top: 10%;
+    font-size: 22px; 
     width: 80%;
 }
 .corp1 h2 span{
@@ -565,22 +493,16 @@ nav ul li a:hover:before{
 }
  
 
-/* tablette */
-@media screen and (max-width: 2170px){
-    .corp1 h2{
-        font-size: 28px; 
-    } 
-}
 
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1100px){
     .corp1 h2{
-        font-size: 24px; 
+        font-size: 20px; 
     } 
      
 }
 
-
-@media screen and (max-width: 900px){
+/* tablette */ 
+@media screen and (max-width: 830px){
     .corp1 h2{
         font-size: 18px; 
     } 
@@ -601,7 +523,6 @@ nav ul li a:hover:before{
     } 
      
 }
- 
  
  
  

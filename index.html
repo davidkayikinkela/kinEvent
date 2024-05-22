@@ -9,31 +9,30 @@
 </head>
 <body>
     <div class="container">   
-    
-        <div class="vid1"> 
-            <video autoplay loop muted play-inline class="clip">
-            <source src="img/cli.MP4" type="video/MP4">
-            </video>
-        </div>
-        <div class="vid2"> 
-            <video autoplay loop muted play-inline class="clip">
-            <source src="img/cli1.MOV" type="video/MP4">
-            </video>
-        </div>
+     
     
         <nav>
             
-            <img src="icone/logo1.png" alt="">
-            <ul class="menu">
-                <li><a href="cinema.html">Cinéma</a></li>
-                <li><a href="chretien.html">Chrétien</a></li>
-                <li><a href="conference.html">Conférence</a></li>
-                <li><a href="concert.html">Concert</a></li>
-                <li><a href="otaku.html">Otaku</a></li>
-                <li><a class="nos" href="nos_evenement.html">Nos événements</a></li>  
-                <li><a href="afficher_evenement.html">Afficher un événement</a></li>
-                <li><a href="contactez_nous.html">Contactez-nous</a></li>
-            </ul>
+                <img class="logo" src="icone/logo1.png" alt="">
+             
+                <ul class="menu"> 
+                    <div class="men"> 
+                        <li><a class="nos" href="nos_evenement.html">Nos événements</a></li>  
+                        <li><a href="afficher_evenement.html">Afficher un événement</a></li>
+                        <li><a href="contactez_nous.html">Contactez-nous</a></li> 
+                    </div>
+                   
+                    <div class="menu1"> 
+                        <p>suivez-nous sur nos réseaux</p>
+                        <div class="menu2"> 
+                            <img src="icone/facebook.png" alt="">
+                            <img src="icone/instagramme.png" alt=""> 
+                            <img src="icone/whatsapp.png" alt=""> 
+                            <img src="icone/telegramme.png" alt=""> 
+                            <img src="icone/x.png" alt="">  
+                        </div>
+                    </div>
+                </ul> 
             <div class="hamburger-menu">
                 <div class="hamburger-icon">
                     <span></span>
@@ -293,9 +292,9 @@
                 <li><a href="#">Politique de confidentialité</a></li>
                 <li><a href="#">A propos </a></li>
             </ul> 
-            <div class="menu1"> 
+            <div class="menu3"> 
                 <p>suivez-nous sur nos réseaux</p>
-                <div class="menu2"> 
+                <div class="menu4"> 
                     <img src="icone/facebook.png" alt="">
                     <img src="icone/instagramme.png" alt=""> 
                     <img src="icone/whatsapp.png" alt=""> 
@@ -307,6 +306,15 @@
         </div>
     </section>
 
-    <script src="js/app.js" src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="js/app.js" ></script> 
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> 
+    <script> 
+        var typed = new typed('.auto-typing',{
+        Strings: ['vivre!', 'rire!', 'partager!', 'expérimente!' ],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true, 
+        });
+    </script>
 </body>
 </html>

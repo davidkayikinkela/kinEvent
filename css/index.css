@@ -16,23 +16,27 @@ nav{
     justify-content: space-between;
     width: 100%;
     
-}
-nav img{
-    width: 260px; 
-    margin: 10px 40px;
+} 
+
+.logo{
+    width: 190px; 
+    margin: 20px 50px;
 }
 .menu{
    display: flex;
 }
+.men {
+   display: flex;
+}
 nav ul li{
-    margin: 0 20px;
+    margin: 0 10px; 
     margin-top: 20px;
 }
 nav ul li a{
     position: relative;
     color: rgb(255, 255, 255);
-    font-size: 26px;
-    padding: 5px 0;
+    font-size: 17px;
+    padding: 2px 0;
     text-transform: uppercase;
     top: 28px; 
     /* display: none; */
@@ -43,7 +47,7 @@ nav ul li a::before{
     content: '';
     left: 0;
     bottom: 0;
-    height: 4px;
+    height: 2.5px;
     width: 100%; 
     background-color: rgb(218, 49, 49);
     transform: scaleX(0);
@@ -59,30 +63,31 @@ nav ul li a:hover:before{
     display: none;
     position: absolute; 
     right: 20px;
-    width: 110px;
-    height: 110px;
+    width: 60px;
+    height: 60px;
     background-color: black;
     box-shadow: 
         0 0 5px rgb(0, 174, 255),
         0 0 10px rgb(0, 174, 255),
         0 0 20px rgb(0, 174, 255),
         0 0 40px rgb(0, 174, 255);
-    border-radius: 20px;
+    border-radius: 15px;
     cursor: pointer;
-    top: 10px; 
+    top: 20px; 
     z-index: 111;
 }
 .hamburger-icon{
     position: relative;
-    width: 80px;
-    height: 70px;
-    margin-left: 15%;
+    width: 46px;
+    height: 40px;
+    margin-left: 10%;
     display: flex;
     align-items: center;
-    top: 18px;
+    top: 10px;
     transform: rotate(0);
     transition: 1s;
 }
+.hamburger-menu.active{position: fixed;}
 .hamburger-menu.active .hamburger-icon{
     transform: rotate(315deg);
 
@@ -92,7 +97,7 @@ nav ul li a:hover:before{
     position: absolute;
     display: block;
     width: 100%;
-    height: 11px;
+    height: 5px;
     background: linear-gradient(45deg, rgb(0, 174, 255), black);
     border: 1px solid rgb(0, 174, 255);
     border-radius: 30px;
@@ -109,8 +114,8 @@ nav ul li a:hover:before{
     width: 60%;
     transform: translateY(0);
 }
-.hamburger-menu.active span:nth-child(1){
-    
+.hamburger-menu.active span:nth-child(1){ 
+    top: -8px;
     width: 100%;
     transform: translateY(25px);
     transition-delay: 0s;
@@ -132,32 +137,99 @@ nav ul li a:hover:before{
     width: 60%;
     transform: rotate(0);
 }
-.hamburger-menu.active span:nth-child(3){
-    bottom: 30px;
+.hamburger-menu.active span:nth-child(3){ 
+    left:-1px ;
+    bottom: 17px;
     width: 100%;
     transform: rotate(90deg);
     transition-delay: 0s;
 }
- 
+div.menu1{ 
+    display: none;
+}  
 
-@media screen and (max-width: 2210px) { 
-    nav img{ 
-        margin-top: 40px;
-        margin-left: 44%;
-        width: 18pc;
+
+/* .auto-typing::before{
+    content: "Vivre!";
+    color: yellow; 
+    animation: words 20s infinite;
+}
+.auto-typing::after{
+    content: "";
+    position: absolute;
+    width: calc(10% + 8px);
+    height:  10%;
+    background-color: rgba(240, 248, 255, 0);
+    border-left: 8px solid yellow;
+    right:  2px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite; 
+}
+@keyframes cursor {
+    to{
+        border-left: 2px solid rgba(240, 248, 255, 0); 
+    } 
+
+}
+@keyframes words {
+    0%,20%{
+        content: "Rire!";
     }
-     .hamburger-menu{ 
-        display: block;  
-        box-shadow: 
-        0 0 2px rgb(0, 174, 255),
-        0 0 4px rgb(0, 174, 255),
-        0 0 8px rgb(0, 174, 255),
-        0 0 16px rgb(0, 174, 255);
+    21%,40%{
+        content: "Vous amusez!";
+    }
+    41%,60%{
+        content: "Expérimenter!";
+    }
+    61%,80%{
+        content: "Jouer!";
+    }
+    81%,100%{
+        content: "Danser!";
+    } 
+
+}
+
+@keyframes typing{
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+
+} */
+
+
+
+
+ 
+ 
+@media screen and (max-width: 1100px) { 
+    .logo{ 
+        margin: 20px 30px;
+        width: 150px;
+    }
+    nav ul li{ 
+        margin:0 7px ; 
+        margin-top:  20px;
     }  
+    nav ul li a{ 
+        font-size: 15px;
+    } 
+    
+ 
+}
+/* tablette */  
+@media screen and (max-width: 830px){ 
+    .logo{  
+        margin-left: 42%;
+        margin-top: 30px ;
+        width: 130px;
+    }
     .menu{ 
         width: 100%; 
         height: 100vh;
-        background-color: rgba(143, 6, 255, 0.623); 
+        background-color: rgba(143, 6, 255, 0.979); 
         backdrop-filter: blur(13px);
         position: fixed;
         display: flex; 
@@ -167,62 +239,64 @@ nav ul li a:hover:before{
         margin-left:  -100%;
         transition: all 0.7s ease ; 
         z-index: 110;
+    }  
+    nav ul li{
+        margin:  20px 0 ; 
+    } 
+    nav ul li a{ 
+        font-size:25px;
+    } 
+    .hamburger-menu{ 
+        display: block;  
+        box-shadow: 
+        0 0 2px rgb(0, 174, 255),
+        0 0 4px rgb(0, 174, 255),
+        0 0 8px rgb(0, 174, 255),
+        0 0 16px rgb(0, 174, 255);
     } 
     .menu.mobile-menu{ 
         margin-left: 0%;
      
-    }
-    nav ul li{ 
-        margin: 35px 0; 
-        
-    } 
-    nav ul li a{ 
-        font-size: 30px;
-    }
-}
-/* tablette */
-@media screen and (max-width: 1300px){ 
-    nav img{ 
-        margin-top: 30px;
-        width: 190px;
-    }
-    nav ul li{
-        margin:  35px 0 ; 
-    } 
-    nav ul li a{ 
-        font-size: 25px;
-    } 
+    }    
     .nos{ 
-        color: rgb(255, 190, 190);
+        color: rgb(255, 218, 218);
+    } 
+    .men{  
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;  
+        margin-top: -40%;
     }
-    .hamburger-menu{  
-        right: 20px;
-        width: 80px;
-        height: 80px; 
-        top: 25px; 
+    div.menu1{ 
+        display: block;  
+        position: absolute; 
+        bottom: 5%;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+    } 
+    .menu1 p{ 
+        color: white;
+        font-size: 30px;
+    } 
+    .menu2{ 
+        margin-top:5%; 
     }
-    .hamburger-icon{
-        position: relative;
-        width: 55px;
-        height: 50px;
-        margin-left: 12%; 
-        top: 13px; 
-    }  
-    .hamburger-icon span{ 
-        
-        width: 100%;
-        height: 8px; 
-    }  
-    .hamburger-menu.active span:nth-child(3){
-        bottom: 17px; 
-    }
-    
- 
- 
+    .menu2 img{ 
+        width: 45px; 
+        margin-left:15px;
+    } 
 }
 /* phone */
-@media screen and (max-width: 500px){
-    nav img{ 
+@media screen and (max-width: 500px){ 
+    nav{ 
+        height: 80px; 
+        border-radius: 0 0 30px 30px;   
+    
+    }
+    .logo{ 
         margin-top: 20px;
         width: 90px;
         margin-left: 40%;
@@ -256,15 +330,48 @@ nav ul li a:hover:before{
     }  
     .hamburger-menu.active span:nth-child(1){
         transform: translateY(12px);
-    }
+        top: 0px;
+    }  
     .hamburger-menu.active span:nth-child(3){
         left: 0px;
         bottom: 10.2px; 
+    } 
+    .men{  
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;  
+        margin-top: -40%;
     }
+    div.menu1{ 
+        display: block;  
+        position: absolute; 
+        bottom: 5%;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+    } 
+    .menu1 p{ 
+        color: white;
+        font-size: 20px;
+    } 
+    .menu2{ 
+        margin-top:5%; 
+    }
+    .menu2 img{ 
+        width: 30px; 
+        margin-left:10px;
+    } 
 }
 
 @media screen and (max-width: 350px){
-    nav img{ 
+    nav{ 
+        height: 70px; 
+        border-radius: 0 0 30px 30px;   
+    
+    }
+    .logo{ 
         margin-top: 15px;
         width: 85px;
         margin-left: 35%;
@@ -302,71 +409,84 @@ nav ul li a:hover:before{
     .hamburger-menu.active span:nth-child(3){
         left: 0px;
         bottom: 9px; 
+    } 
+    .men{  
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;  
+        margin-top: -40%;
     }
+    div.menu1{ 
+        display: block;  
+        position: absolute; 
+        bottom: 5%;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+    } 
+    .menu1 p{ 
+        color: white;
+        font-size: 18px;
+    } 
+    .menu2{ 
+        margin-top:5%; 
+    }
+    .menu2 img{ 
+        width: 27px; 
+        margin-left:8px;
+    } 
 }
 
 
 
 
 /* corps */
+ 
 
-.vid2{
-    display: none;
-}
-
-.clip{
-    position: absolute;
-    z-index: -1;
+.container{ 
+    background: url('../img/img1.JPG');
+    background-size: cover; 
     width: 100%;
-    height: auto;
-    overflow: hidden;
-    top:  -30pc;
-    
-    
-}
-
-.container{
-    width: 100%;
-
+    height: 60pc;   
 } 
 .texte1{
     padding: 16pc 0;
     color: white;
-    margin-left: 10%;
+    margin-left: 7%;
     
 }
 .texte1 h1{
-    font-size: 150px;
-    line-height: 2 ;
-    margin-bottom: 50px;
+    font-size: 100px; 
+    margin-bottom: 70px;
 }
 .texte1 p{
-    font-size: 34px;
+    font-size: 24px;
     line-height: 1.5;
-    margin-bottom: 110px;
-    padding-right: 20%;
+    margin-bottom: 90px;
+    padding-right: 35%;
 }
 .texte1 a{
     text-decoration: none;
-    font-size: 45px;
-    border: 5px solid  rgb(0, 174, 255);
+    font-size: 27px;
+    border: 3px solid  rgb(0, 174, 255);
     color: rgb(0, 174, 255);
-    padding: 20px 30px;
+    padding: 15px 25px;
     border-radius: 50px;
     transition: 0.3s;
 }
 .texte1 a:hover{
     background-color: rgb(0, 174, 255);
     color: white;
-}
-/* tablette */ 
-@media screen and (max-width: 1300px){ 
-    .clip{ 
-        top:  0pc;
-    }
+} 
+@media screen and (max-width: 1100px){ 
+    .container{  
+        height: 46pc;   
+    }  
     .texte1{
         padding:  8pc 0; 
-        margin-left: 10%; 
+        margin-left: 7%; 
     }
     .texte1 h1{ 
         margin-top: 70px;
@@ -374,27 +494,45 @@ nav ul li a:hover:before{
         margin-bottom: 50px;
     }
     .texte1 p{
-        font-size: 25px;
+        font-size: 20px;
         line-height: 1.5;
-        margin-bottom: 70px;
-        padding-right: 20%;
+        margin-bottom: 50px;
+        padding-right: 35%;
     }
     .texte1 a{ 
-        font-size: 30px; 
+        font-size: 24px; 
         padding: 10px 15px; 
     }
 }
-@media screen and (max-width: 900px){ 
+/* tablette */
+@media screen and (max-width: 830px){ 
+    .container{  
+        height: 40pc;   
+    } 
     .texte1 h1{ 
         margin-top: 20px;
-        font-size:80px; 
+        font-size:65px; 
         margin-bottom: 30px;
+    }  
+    .texte1 p{
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 40px;
+        padding-right: 35%;
+    }
+    .texte1 a{ 
+        font-size: 20px;
+        border: 2px solid  rgb(0, 174, 255);
+        padding: 10px 10px;
+        border-radius: 20px;
+        transition: 0.3s; 
     }
 } 
 /* phone */
-@media screen and (max-width: 500px){
-    .vid1{display: none;}
-    .vid2{display: block;} 
+@media screen and (max-width: 500px){ 
+    .container{  
+        height: 33pc;   
+    } 
     .texte1{
         padding:  1pc 0; 
         margin-left: 7%; 
@@ -425,7 +563,7 @@ nav ul li a:hover:before{
         margin-left: 5%; 
     }
     .texte1 h1{ 
-        margin-top: 70px;
+        margin-top: 120px;
         font-size:30px; 
         margin-bottom: 5px;
     }
@@ -449,51 +587,66 @@ nav ul li a:hover:before{
 
 .corp1{
 
-    margin-top: 100px;
+    margin-top: -90px;
     background-color:  rgb(8, 97, 138);
     border-radius: 100px 100px 0 0;
     width: 100%;
 }
 .consiste{
-    margin-left: 10%;
-    
-    
-
+    margin-left: 7%;
+     
 }
 .consiste h2{
-    font-size: 50px;
+    font-size: 45px;
     padding: 100px 0;
     color: white;
 }
 .consiste p{
-    font-size: 33px;
+    font-size: 26px;
     line-height: 60px;
     color:white ;
     width: 70%;
-    margin-bottom: 10pc;  
+    margin-bottom: 8pc; 
+    letter-spacing: 1px;
 }
 
-/* tablette */
-@media screen and (max-width: 1300px){ 
+@media screen and (max-width: 1100px){ 
     .corp1{ 
-        margin-top:  0px; 
+        margin-top: -90px; 
     } 
     .consiste h2{
-        font-size: 40px;
+        font-size: 35px;
         padding: 60px 0; 
     }
     .consiste p{
-        font-size: 25px;
-        line-height: 60px;
+        font-size: 20px;
+        line-height: 40px;
         color:white ;
         width: 70%;
-        margin-bottom: 10pc;  
+        margin-bottom: 7pc;  
+    }
+} 
+/* tablette */
+@media screen and (max-width: 830px){  
+    .corp1{ 
+        border-radius: 70px 70px 0 0; 
+    } 
+    .consiste h2{
+        font-size: 30px;
+        padding: 60px 0; 
+    }
+    .consiste p{
+        font-size: 20px;
+        line-height: 40px;
+        color:white ;
+        width: 70%;
+        margin-bottom: 5pc;  
     }
 }
 /* phone */
 @media screen and (max-width: 500px){
     .corp1{ 
-        margin-top: 20px;
+        margin-top: -90px;
         background-color:  rgb(8, 97, 138);
         border-radius: 40px 40px 0 0;
         width: 100%;
@@ -502,13 +655,13 @@ nav ul li a:hover:before{
         margin-left: 7%; 
     }
     .consiste h2{
-        font-size: 24px;
+        font-size: 20px;
         padding: 50px 0;
         color: white;
     }
     .consiste p{
         margin-top: -20px;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 30px;
         color:white ;
         width: 80%;
@@ -517,7 +670,7 @@ nav ul li a:hover:before{
 }
 @media screen and (max-width: 350px){
     .corp1{ 
-        margin-top: 35px;
+        margin-top:-90px;
         background-color:  rgb(8, 97, 138);
         border-radius: 35px 35px 0 0;
         width: 100%;
@@ -532,7 +685,7 @@ nav ul li a:hover:before{
     }
     .consiste p{
         margin-top: -20px;
-        font-size: 15px;
+        font-size: 14px;
         line-height: 30px;
         color:white ;
         width: 90%;
@@ -545,7 +698,7 @@ nav ul li a:hover:before{
 
 .carousel{
     width: 100%;
-    height: 94pc;
+    height: 60pc;
     overflow: hidden;
     position: relative;
 }
@@ -558,41 +711,44 @@ nav ul li a:hover:before{
     height: 100%;
     object-fit: cover;
 }
-.carousel .list .item .content{
+.carousel .list .item .content{ 
     position: absolute;
-    top: 17%;
+    top: 5pc;
     width: 1540px;
     max-width: 80%;
-    left: 10%; 
+    left: 7%; 
     padding-right: 30%;
     box-sizing: border-box;
     color: white;
 }
 .carousel .list .item .content .author{
     font-weight: bold;
-    letter-spacing: 4pc;
-    font-size: 30px; 
+    letter-spacing: 10px;
+    font-size: 20px; 
 }
 .carousel .list .item .content .title{
     font-weight: bold;
-    font-size: 12pc;
+    font-size: 100px; 
+    padding:  10px 0;
     line-height: 1.5em;
 }
 .carousel .list .item .content .des{
-    font-size: 40px;
+    font-size: 25px;
+    line-height: 40px; 
+    letter-spacing: 2px;
 }
 .content .bouton{
     display: flex;
     
 }
 .content .bouton a{
-    padding: 20px 20px;
+    padding: 13px 13px;
     color: black;
     background-color: white;
-    font-size: 25px;
+    font-size: 22px;
     margin-top: 50px;
-    letter-spacing: 10Px;
-    margin-left: 15px;
+    letter-spacing: 5Px;
+    margin-left: 20px;
     border-radius: 10px;
 }
 .content .bouton a:nth-child(2){
@@ -604,16 +760,16 @@ nav ul li a:hover:before{
 /* thumbnail */
 .thumbnail{
     position: absolute;
-    margin-top: 57pc;
+    margin-top: 32pc;
     left: 50%;
     width: max-content;
     z-index: 100;
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
 .thumbnail .item{
-    width: 300px;
-    height: 440px;
+    width: 220px;
+    height: 330px;
     flex-shrink: 0;
     position: relative;
 }
@@ -632,14 +788,14 @@ nav ul li a:hover:before{
 }
 .thumbnail .item .content .title{
     font-weight: bold; 
-    font-size: 18px;
+    font-size: 15px;
 }
 /* arrow */
 .arrows{
     position: absolute;
-    top: 70%;
-    right: 70%;
-    width: 300px;
+    top: 37pc;
+    left: 17%;
+    width: 250px;
     max-width: 30%;
     display: flex;
     gap: 10px;
@@ -647,8 +803,8 @@ nav ul li a:hover:before{
     cursor: pointer;
 }
 .arrows button{
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     background-color: grey;
     border: none;
@@ -694,11 +850,11 @@ nav ul li a:hover:before{
 }
 /* effect next click */
 .carousel.next .list .item:nth-child(1) img{
-    width: 300px;
-    height: 440px;
+    width: 220px;
+    height: 330px;
     position: absolute;
     left: 50%;
-    bottom: 152px;
+    bottom: 118px;
     border-radius: 20px;
     animation: showImage .5s linear 1 forwards;
 }
@@ -718,11 +874,11 @@ nav ul li a:hover:before{
 }
 @keyframes showThumbnail{
     to{
-        width: 300px;
+        width:220px;
     }
 }
 .carousel.next .thumbnail{
-    transform: translateX(300px);
+    transform: translateX(220px);
     animation: transformThumbnail .5s linear 1 forwards;
 }
 @keyframes transformThumbnail{
@@ -742,11 +898,11 @@ nav ul li a:hover:before{
 }
 @keyframes outImage{
     to{
-        width: 300px;
-        height: 440px;
+        width: 220px;
+        height: 330px;
         border-radius: 20px;
         left: 50%;
-        bottom: 152px;
+        bottom: 118px;
     }
 }
 .carousel.prev .thumbnail .item:nth-child(1){
@@ -763,7 +919,7 @@ nav ul li a:hover:before{
 }
 @keyframes contentOut{
     to{
-        transform: translateY(-300px);
+        transform: translateY(-220px);
         filter: blur(20px);
         opacity: 0;
     }
@@ -775,7 +931,7 @@ nav ul li a:hover:before{
 /* time */
 .time{
     width: 0%;
-    height: 10px;
+    height: 8px;
     background-color: rgb(223, 189, 0);
     position: absolute;
     z-index: 100;
@@ -791,61 +947,54 @@ nav ul li a:hover:before{
     to{
         width: 0;
     }
-}
-@media screen and (max-width:678px) {
-    .carousel .list .item .content{
-        padding-right: 0;
-    }
-    .carousel .list .item .content .title{
-        font-size: 8pc;
-    }
-}
-/* tablette */
-@media screen and (max-width: 1300px){ 
+} 
+ 
+@media screen and (max-width: 1100px){ 
     .carousel{
         width: 100%;
-        height: 55pc; 
+        height: 45pc; 
     }  
     .carousel .list .item .content{
         position: absolute;
-        top: 10%;
+        top: 4pc;
         width: 900px; 
-        left: 10%; 
+        left: 7%; 
         padding-right: 30%; 
     }  
     .carousel .list .item .content .author{ 
-        letter-spacing: 30px;
-        font-size: 20px; 
+        letter-spacing: 12px;
+        font-size: 16px; 
     }
     .carousel .list .item .content .title{
         font-weight: bold;
-        font-size: 100px; 
+        font-size: 70px; 
     }
     .carousel .list .item .content .des{ 
-        margin-top: 20px;
-        font-size: 25px;
+        margin-top:10px;
+        font-size: 20px; 
+        line-height: 1.2em;
     } 
     .content .bouton a{
-        padding: 15px 15px; 
-        font-size: 15px;
-        margin-top: 50px;
-        letter-spacing: 10Px;
+        padding: 10px 10px; 
+        font-size: 13px;
+        margin-top: 30px;
+        letter-spacing: 5Px;
         margin-left: 15px; 
     } 
     
     /* thumbnail */
     .thumbnail{ 
-        margin-top: 28pc; 
+        margin-top: 22pc; 
         gap: 10px;
     }
     .thumbnail .item{
-        width: 180px;
-        height: 300px; 
+        width: 160px;
+        height: 250px; 
     }   
     /* arrow */
     .arrows{ 
-        top: 65%;
-        right: 55%;
+        top: 28pc;
+        left: 15%;
         width: 300px;
         max-width: 30%; 
     }
@@ -856,9 +1005,10 @@ nav ul li a:hover:before{
     }  
     /* effect next click */
     .carousel.next .list .item:nth-child(1) img{
-        width: 180px;
-        height: 300px; 
-        left: 50%; 
+        width: 160px;
+        height: 250px; 
+        left: 50%;  
+        bottom: 118px;
     } 
     .carousel.next .thumbnail .item:nth-last-child(1){
         width: 0;
@@ -867,11 +1017,11 @@ nav ul li a:hover:before{
     }
     @keyframes showThumbnail{
         to{
-            width: 180px;
+            width: 160px;
         }
     }
     .carousel.next .thumbnail{
-        transform: translateX(180px);
+        transform: translateX(160px);
         animation: transformThumbnail .5s linear 1 forwards;
     }
     @keyframes transformThumbnail{
@@ -885,11 +1035,110 @@ nav ul li a:hover:before{
     }
     @keyframes outImage{
         to{
-            width: 180px;
-            height: 300px;
+            width: 160px;
+            height: 250px;
             border-radius: 20px;
             left: 50%;
-            bottom: 132px;
+            bottom: 118px;
+        }
+    } 
+    /* time */
+    .time{ 
+        height: 6px; 
+    }  
+ } 
+/* tablette */
+@media screen and (max-width: 830px){ 
+    .carousel{
+        width: 100%;
+        height: 50pc; 
+    }  
+    .carousel .list .item .content{
+        position: absolute;
+        top: 4pc;
+        width: 900px; 
+        left: 7%; 
+        padding-right: 30%; 
+    }  
+    .carousel .list .item .content .author{ 
+        letter-spacing: 12px;
+        font-size: 17px; 
+    }
+    .carousel .list .item .content .title{
+        font-weight: bold;
+        font-size: 60px; 
+    }
+    .carousel .list .item .content .des{ 
+        margin-top:10px;
+        font-size: 22px; 
+        line-height: 1.2em;
+    } 
+    .content .bouton a{
+        padding: 10px 10px; 
+        font-size: 16px;
+        margin-top: 30px;
+        letter-spacing: 5Px;
+        margin-left: 15px; 
+    } 
+    
+    /* thumbnail */
+    .thumbnail{ 
+        margin-top: 26pc; 
+        gap: 10px;
+    }
+    .thumbnail .item{
+        width: 160px;
+        height: 250px; 
+    }   
+    /* arrow */
+    .arrows{ 
+        top: 32pc;
+        left: 15%;
+        width: 300px;
+        max-width: 30%; 
+    }
+    .arrows button{
+        width: 60px;
+        height: 60px; 
+        font-size: 30px; 
+    }  
+    /* effect next click */
+    .carousel.next .list .item:nth-child(1) img{
+        width: 160px;
+        height: 250px; 
+        left: 50%; 
+        bottom: 134px;
+    } 
+    .carousel.next .thumbnail .item:nth-last-child(1){
+        width: 0;
+        overflow: hidden;
+        animation: showThumbnail .5s linear 1 forwards;
+    }
+    @keyframes showThumbnail{
+        to{
+            width: 160px;
+        }
+    }
+    .carousel.next .thumbnail{
+        transform: translateX(160px);
+        animation: transformThumbnail .5s linear 1 forwards;
+    }
+    @keyframes transformThumbnail{
+        to{
+            transform: translateX(0);
+        }
+    }
+    /* effect prev click */ 
+    .carousel.prev .list .item:nth-child(2) img{ 
+        animation: outImage 0.5s linear 1 forwards;
+    }
+    @keyframes outImage{
+        to{
+            width: 160px;
+            height: 250px;
+            border-radius: 20px;
+            left: 50%;
+            bottom: 134px;
         }
     } 
     /* time */
@@ -906,21 +1155,21 @@ nav ul li a:hover:before{
     .carousel .list .item .content{
         position: absolute;
         top: 13%;
-        width: 1000px; 
+        width: 70% ; 
         left: 5%; 
         padding-right: 0%; 
     }  
     .carousel .list .item .content .author{ 
-        letter-spacing: 15px;
+        letter-spacing: 10px;
         font-size: 12px; 
     }
     .carousel .list .item .content .title{
         font-weight: bold;
-        font-size: 45px; 
+        font-size: 38px; 
     }
     .carousel .list .item .content .des{ 
         margin-top: 10px;
-        font-size: 18px;
+        font-size: 16px;
     } 
     .content .bouton a{
         padding: 13px 17px; 
@@ -932,12 +1181,12 @@ nav ul li a:hover:before{
     
     /* thumbnail */
     .thumbnail{ 
-        margin-top: 23.5pc; 
+        margin-top: 24.7pc; 
         gap: 5px;
     }
     .thumbnail .item{
         width:110px;
-        height: 200px; 
+        height: 180px; 
     }   
     .thumbnail .item img{
         border-radius: 10px;
@@ -960,8 +1209,10 @@ nav ul li a:hover:before{
     /* effect next click */
     .carousel.next .list .item:nth-child(1) img{
         width: 110px;
-        height: 200px; 
+        height: 180px; 
         left: 50%; 
+        bottom: 64px;
+        border-radius: 10px;
     } 
     .carousel.next .thumbnail .item:nth-last-child(1){
         width: 0;
@@ -974,7 +1225,7 @@ nav ul li a:hover:before{
         }
     }
     .carousel.next .thumbnail{
-        transform: translateX(180px);
+        transform: translateX(110px);
         animation: transformThumbnail .5s linear 1 forwards;
     }
     @keyframes transformThumbnail{
@@ -989,7 +1240,7 @@ nav ul li a:hover:before{
     @keyframes outImage{
         to{
             width: 110px;
-            height: 200px;
+            height: 180px;
             border-radius: 10px;
             left: 50%;
             bottom: 64px;
@@ -1065,6 +1316,8 @@ nav ul li a:hover:before{
         width: 100px;
         height: 160px; 
         left: 50%; 
+        bottom: 64px;
+        border-radius: 10px;
     } 
     .carousel.next .thumbnail .item:nth-last-child(1){
         width: 0;
@@ -1077,7 +1330,7 @@ nav ul li a:hover:before{
         }
     }
     .carousel.next .thumbnail{
-        transform: translateX(180px);
+        transform: translateX(100px);
         animation: transformThumbnail .5s linear 1 forwards;
     }
     @keyframes transformThumbnail{
@@ -1119,33 +1372,49 @@ nav ul li a:hover:before{
     z-index: 100;  
 }
 .title h2{
-    font-size: 50px;
-    padding: 100px 0;
+    font-size: 40px;
+    padding: 90px 0;
     color: white;
-    margin-left: 10%;
+    margin-left: 7%;
 }
 .title p{
     color: white;
-    font-size: 33px;
+    font-size: 25px;
     margin-bottom: 100px;
-    margin-left: 10%;
+    margin-left: 7%;
 
 } 
-/* tablette */
-@media screen and (max-width: 1300px){  
+ 
+@media screen and (max-width: 1100px){  
     .title h2{
-        font-size: 35px;
+        font-size: 30px;
         padding: 70px 0; 
     }
     .title p{ 
-        font-size: 25px;
+        font-size: 20px;
         margin-bottom: 80px; 
     
     } 
 
  } 
+/* tablette */
+ @media screen and (max-width: 830px){  
+    .semaine{ 
+        border-radius: 70px; 
+    }
+     .title h2{
+         font-size: 30px;
+         padding: 70px 0; 
+     }
+     .title p{ 
+         font-size: 20px;
+         margin-bottom: 80px; 
+     
+     } 
+ 
+  } 
 /* phone1 */
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px){ 
     .semaine{
         margin-top: -50px;
         background-color: red;
@@ -1202,22 +1471,21 @@ nav ul li a:hover:before{
 }
 .contact1{
     color: white;
-    margin-left: 12pc;
+    margin-left: 7%;
 }
 .contact11{
-    margin-top: 70px;
-    font-size: 50px;
+    margin-top: 70px; 
     padding: 100px 0;
     color: rgb(223, 189, 0);
     
 }
 .contact1 h2{
-    font-size: 50px;
-    padding: 100px 0;
+    font-size: 40px;
+    padding: 90px 0;
     color: rgb(223, 189, 0);
 }
 .contact1 p{
-    font-size: 33px;
+    font-size: 25px;
     line-height: 60px;
     padding-right: 40%;
     margin-top: -60px;
@@ -1227,10 +1495,10 @@ nav ul li a:hover:before{
 .contact1 a{
 
     text-decoration: none;
-    font-size: 33px;
+    font-size: 25px;
     border: 3px solid  rgb(223, 189, 0);
     color: rgb(223, 189, 0);
-    padding: 20px 30px;
+    padding: 15px 20px;
     border-radius: 50px;
     transition: 0.3s;
 }
@@ -1238,28 +1506,52 @@ nav ul li a:hover:before{
     background-color: rgb(223, 189, 0);
     color: white;
 }
-/* tablette */
-@media screen and (max-width: 1300px){ 
+ 
+@media screen and (max-width: 1100px){ 
     .contact{ 
         margin-top: 7pc; 
     }
     .contact1{ 
-        margin-left: 10%;
+        margin-left: 7%;
     } 
     
     .contact1 h2{
-        font-size: 40px; 
+        font-size: 30px; 
         
     }
     .contact1 p{
-        font-size: 25px;
-        line-height: 50px; 
+        font-size: 20px;
+        line-height: 40px; 
         margin-bottom: 70px;
     }
     
     .contact1 a{ 
-        font-size: 25px; 
-        padding: 10px 20px; 
+        font-size: 20px; 
+        padding: 10px 15px; 
+    } 
+}
+/* tablette */
+@media screen and (max-width: 830px){ 
+    .contact{ 
+        margin-top: 7pc; 
+    }
+    .contact1{ 
+        margin-left: 7%;
+    } 
+    
+    .contact1 h2{
+        font-size: 30px; 
+        
+    }
+    .contact1 p{
+        font-size: 20px;
+        line-height: 36px; 
+        margin-bottom: 70px;
+    }
+    
+    .contact1 a{ 
+        font-size: 20px; 
+        padding: 10px 15px; 
     } 
 }
 /* phone1 */
@@ -1342,17 +1634,17 @@ nav ul li a:hover:before{
 }
 .fin1 p{ 
     margin: 0 10%;
-    font-size: 40px;
+    font-size: 28px;
     color: white;
 
 }
 .fin1 a{
 
     text-decoration: none;
-    font-size: 40px;
+    font-size: 25px;
     border: 3px solid  rgb(255, 255, 255);
     color: rgb(255, 255, 255);
-    padding: 20px 30px;
+    padding: 15px 20px;
     border-radius: 50px;
     transition: 0.3s;
 }
@@ -1364,15 +1656,15 @@ nav ul li a:hover:before{
     text-align: center;
 }
 .log{
-    margin-top: 20pc;
-    width: 30pc;
+    margin-top: 15pc;
+    width: 15pc;
     margin-bottom: 40px;
 }
 .fin2 ul li{
-    margin-top: 80px;
+    margin-top: 60px;
 }
 .fin2 ul li a{
-    font-size: 33px;
+    font-size: 28px;
     text-decoration: underline;
     color: white;
 }
@@ -1381,71 +1673,98 @@ nav ul li a:hover:before{
 }
 .fin2 p{
     color: white;
-    font-size: 33px;
+    font-size: 28px;
     margin-top: 120px;
-} 
-.men{  
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;   
-}
-.menu1{ 
+}  
+.menu3{ 
     display: block;  
 } 
-.menu1 p{ 
+.menu3 p{ 
     margin-top: 180px;
     color: white;
-    font-size: 32px;
+    font-size: 28px;
 }  
-div.menu2 img{  
+div.menu4 img{  
     margin-top: 30px;
-    width: 70px; 
+    width: 50px; 
     margin-left: 2%;
 } 
-/* tablette */
-@media screen and (max-width: 1300px){ 
+ 
+@media screen and (max-width: 1100px){ 
     .fin{ 
         margin-top: -100px; 
     } 
     .fin1 p{
-        font-size: 25px; 
+        font-size: 22px; 
     }
     .fin1 a{ 
-        font-size: 25px; 
-        padding: 15px 20px; 
+        font-size: 20px; 
+        padding: 15px 15px; 
     }  
     .log{
-        margin-top: 15pc;
-        width: 16pc;
+        margin-top: 12pc;
+        width: 12pc;
         margin-bottom: 20px;
     }
     .fin2 ul li{
-        margin-top: 50px;
+        margin-top: 40px;
     }
     .fin2 ul li a{
-        font-size: 25px; 
+        font-size: 22px; 
     } 
     .fin2 p{ 
-        font-size: 25px;
+        font-size: 22px;
         margin-top: 100px;
-    } 
-    .men{  
-        display: flex; 
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;   
-    }
-    .menu1{ 
+    }  
+    .menu3{ 
         display: block;  
     } 
-    .menu1 p{ 
+    .menu3 p{ 
         color: white;
-        font-size: 27px;
+        font-size: 22px;
     }  
-    div.menu2 img{ 
+    div.menu4 img{ 
         width: 40px; 
-        margin-left: 5%;
+        margin-left: 2%;
+    } 
+}
+/* tablette */
+@media screen and (max-width: 830px){ 
+    .fin{ 
+        margin-top: -100px; 
+    } 
+    .fin1 p{
+        font-size: 22px; 
+    }
+    .fin1 a{ 
+        font-size: 20px; 
+        padding: 10px 15px; 
+    }  
+    .log{
+        margin-top: 12pc;
+        width: 10pc;
+        margin-bottom: 20px;
+    }
+    .fin2 ul li{
+        margin-top: 40px;
+    }
+    .fin2 ul li a{
+        font-size: 22px; 
+    } 
+    .fin2 p{ 
+        font-size: 22px;
+        margin-top: 100px;
+    }  
+    .menu3{ 
+        display: block;  
+    } 
+    .menu3 p{ 
+        color: white;
+        font-size: 22px;
+    }  
+    div.menu4 img{ 
+        width: 36px; 
+        margin-left: 2%;
     } 
 }
 /* phone1 */
