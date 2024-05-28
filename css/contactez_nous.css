@@ -14,7 +14,7 @@ body{
 }
 nav{
     width: 100%;
-    height: 110px;
+    height: 85px;
     background-color: rgb(71, 23, 80);
     border-radius: 0 0 30px 30px;  
     display: flex;
@@ -23,8 +23,8 @@ nav{
 
 }
 .logo{
-    width: 190px; 
-    margin: 20px 50px;
+    width: 120px; 
+    margin: 15px 50px;
 }
 .menu{
    display: flex;
@@ -33,16 +33,16 @@ nav{
    display: flex;
 }
 nav ul li{
-    margin: 0 10px; 
+    margin: 0 6px; 
     margin-top: 20px;
 }
 nav ul li a{
     position: relative;
     color: rgb(255, 255, 255);
-    font-size: 17px;
+    font-size: 12px;
     padding: 2px 0;
     text-transform: uppercase;
-    top: 28px; 
+    top: 10px; 
     /* display: none; */
 
 }
@@ -51,7 +51,7 @@ nav ul li a::before{
     content: '';
     left: 0;
     bottom: 0;
-    height: 2.5px;
+    height: 3px;
     width: 100%; 
     background-color: rgb(218, 49, 49);
     transform: scaleX(0);
@@ -67,8 +67,8 @@ nav ul li a:hover:before{
     display: none;
     position: absolute; 
     right: 20px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: black;
     box-shadow: 
         0 0 5px rgb(0, 174, 255),
@@ -82,12 +82,12 @@ nav ul li a:hover:before{
 }
 .hamburger-icon{
     position: relative;
-    width: 46px;
-    height: 40px;
+    width: 38px;
+    height: 36px;
     margin-left: 10%;
     display: flex;
     align-items: center;
-    top: 10px;
+    top: 7px;
     transform: rotate(0);
     transition: 1s;
 }
@@ -111,15 +111,14 @@ nav ul li a:hover:before{
     transition: .3s;
     transition-delay: 1s;
 }
-.hamburger-icon span:nth-child(1){
-    bottom: 0;
+.hamburger-icon span:nth-child(1){ 
     top: 0;
     left: 0;
     width: 60%;
     transform: translateY(0);
 }
 .hamburger-menu.active span:nth-child(1){ 
-    top: -8px;
+    top: -10px;
     width: 100%;
     transform: translateY(25px);
     transition-delay: 0s;
@@ -143,37 +142,52 @@ nav ul li a:hover:before{
 }
 .hamburger-menu.active span:nth-child(3){ 
     left:-1px ;
-    bottom: 17px;
+    bottom: 15px;
     width: 100%;
     transform: rotate(90deg);
     transition-delay: 0s;
 }
 div.menu1{ 
     display: none;
-}
+}   
+
+
+
+ 
+ 
  
 @media screen and (max-width: 1100px) { 
     .logo{ 
-        margin: 20px 30px;
-        width: 150px;
+        width: 100px; 
+        margin: 15px 50px;
     }
     nav ul li{ 
-        margin:0 7px ; 
-        margin-top:  20px;
+        margin:15px 5px ; 
     }  
     nav ul li a{ 
-        font-size: 15px;
+        font-size: 11px;
     } 
     
  
-}
+} 
 /* tablette */  
-@media screen and (max-width: 830px){ 
+@media screen and (max-width: 830px){  
+    nav{ 
+        height: 92px; 
+    
+    }
     .logo{  
         margin-left: 42%;
         margin-top: 30px ;
-        width: 130px;
+        width: 110px;
     }
+    .top{  
+        z-index: 120 ;
+        margin-left: 42%;
+        margin-top: 30px ;
+        width: 110px;
+        position: fixed; 
+    } 
     .menu{ 
         width: 100%; 
         height: 100vh;
@@ -189,10 +203,10 @@ div.menu1{
         z-index: 110;
     }  
     nav ul li{
-        margin:  20px 0 ; 
+        margin:  15px 0 ; 
     } 
     nav ul li a{ 
-        font-size:25px;
+        font-size:20px;
     } 
     .hamburger-menu{ 
         display: block;  
@@ -227,47 +241,54 @@ div.menu1{
     } 
     .menu1 p{ 
         color: white;
-        font-size: 30px;
+        font-size: 20px;
     } 
     .menu2{ 
         margin-top:5%; 
     }
     .menu2 img{ 
-        width: 45px; 
-        margin-left:15px;
+        width: 35px; 
+        margin-left:10px;
     } 
 }
 /* phone */
-@media screen and (max-width: 500px){ 
+@media screen and (max-width: 500px){
     nav{ 
-        height: 80px; 
+        height: 70px; 
         border-radius: 0 0 30px 30px;   
     
     }
     .logo{ 
         margin-top: 20px;
-        width: 90px;
+        width: 80px;
         margin-left: 40%;
     }
+    .top{ 
+        z-index: 120 ;
+        margin-top: 20px;
+        width: 80px;
+        margin-left: 40%;
+        position: fixed; 
+    } 
     nav ul li{
-        margin:  22px 0 ; 
+        margin:  12px 0 ; 
     } 
     nav ul li a{ 
-        font-size:18px;
+        font-size:16px;
     } 
     .hamburger-menu{  
         right: 10px;
-        width: 40px;
-        height: 40px; 
+        width: 35px;
+        height: 35px; 
         top: 15px; 
-        border-radius: 10px;
+        border-radius: 7px;
     }
     .hamburger-icon{
         position: relative;
-        width: 30px;
-        height: 28px;
-        margin-left: 10%; 
-        top: 6px; 
+        width: 28px;
+        height: 25px;
+        margin-left: 5%; 
+        top: 4px; 
     }  
     .hamburger-icon span{ 
         box-shadow: 
@@ -282,7 +303,7 @@ div.menu1{
     }  
     .hamburger-menu.active span:nth-child(3){
         left: 0px;
-        bottom: 10.2px; 
+        bottom: 8px; 
     } 
     .men{  
         display: flex; 
@@ -302,33 +323,40 @@ div.menu1{
     } 
     .menu1 p{ 
         color: white;
-        font-size: 20px;
+        font-size: 16px;
     } 
-    .menu2{ 
+    .menu2{   
         margin-top:5%; 
     }
     .menu2 img{ 
-        width: 30px; 
-        margin-left:10px;
+        width: 20px; 
+        margin-left:4px;
     } 
 }
 
 @media screen and (max-width: 350px){
     nav{ 
-        height: 70px; 
+        height: 65px; 
         border-radius: 0 0 30px 30px;   
     
     }
     .logo{ 
-        margin-top: 15px;
-        width: 85px;
-        margin-left: 35%;
+        margin-top: 20px;
+        width: 70px;
+        margin-left: 40%;
     }
+    .top{ 
+        margin-top: 20px;  
+        width: 70px; 
+        z-index: 120 ;
+        margin-left: 40%;
+        position: fixed;
+    }  
     nav ul li{
-        margin:  18px 0 ; 
+        margin:  11px 0 ; 
     } 
     nav ul li a{ 
-        font-size:15px;
+        font-size:14px;
     } 
     .hamburger-menu{  
         right: 5px;
@@ -376,20 +404,20 @@ div.menu1{
     } 
     .menu1 p{ 
         color: white;
-        font-size: 18px;
+        font-size: 14px;
     } 
     .menu2{ 
+        width: 10pc;
         margin-top:5%; 
     }
-    .menu2 img{ 
-        width: 27px; 
-        margin-left:8px;
+    .menu2 img{  
+        margin-left:3.5px;
     } 
 }
 
 /* corp */
 .corp h3{
-    font-size: 18px;
+    font-size: 14px;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px 40px;
@@ -400,7 +428,7 @@ div.menu1{
 }
 
 .corp h1{
-    font-size:30px;
+    font-size:25px;
     text-align: center;
     margin-top: 50px;
     margin-bottom: 100px;
@@ -408,7 +436,7 @@ div.menu1{
  
 @media screen and (max-width: 1100px){
     .corp h3{
-        font-size: 17px;
+        font-size: 12px;
         margin-top: 10px;
         margin-bottom: 10px;
         padding: 10px 40px; 
@@ -420,7 +448,7 @@ div.menu1{
     }
     
     .corp h1{
-        font-size: 28px;
+        font-size: 22px;
         text-align: center;
         margin-top: 40px;
         margin-bottom: 80px;
@@ -429,7 +457,7 @@ div.menu1{
 /* tablette */
 @media screen and (max-width: 830px){
     .corp h3{
-        font-size: 17px;
+        font-size: 13px;
         margin-top: 10px;
         margin-bottom: 10px;
         padding: 10px 40px; 
@@ -441,7 +469,7 @@ div.menu1{
     }
     
     .corp h1{
-        font-size: 28px;
+        font-size: 22px;
         text-align: center;
         margin-top: 40px;
         margin-bottom: 80px;
@@ -451,7 +479,7 @@ div.menu1{
 /* telephone */ 
 @media screen and (max-width: 500px){
     .corp h3{
-        font-size: 11px;
+        font-size: 9px;
         margin-top: 0px;
         margin-bottom: 10px;
         padding: 10px 40px; 
@@ -464,23 +492,17 @@ div.menu1{
     }
     
     .corp h1{
-        font-size: 17px;
+        font-size: 15px;
         text-align: center;
         margin-top: 30px;
         margin-bottom: 60px;
-    }
-    .corp h2{
-        margin-left: 5%;
-        font-size: 17px;
-        margin-top: 10px;
-        margin-bottom: 10px;
     } 
 }
 
 /* corp1 */
 
 .form-img h3{
-    font-size: 22px;
+    font-size: 16px;
     margin:0px 30px;
 }
 .form-img h3 a{
@@ -493,10 +515,10 @@ div.menu1{
     display: flex;
 }
 .réseaux a {
-    margin: 15px 15px;
+    margin: 10px 10px;
 }
 .réseaux a img{
-    width: 55px;
+    width: 35px;
 }
 .form-img{ 
     align-items: center; 
@@ -523,7 +545,7 @@ div.menu1{
     outline: 0;
     resize: none;
     width: 100%;
-    font-size: 20px;
+    font-size: 16px;
 }
 ::placeholder{
     color: rgb(207, 207, 207);
@@ -534,9 +556,9 @@ button{
     padding: 10px 10px;
     background: linear-gradient(rgb(71, 23, 80),rgb(76, 57, 80));
     border-radius: 60px;
-    height: 60px;
+    height: 50px;
     color: white;
-    font-size: 15px;
+    font-size: 13px;
     cursor: pointer;
     margin-right: 16%;
     margin-bottom: 300px;
@@ -546,39 +568,39 @@ button{
 
 @media screen and (max-width: 1100px){
     .form-img h3{
-        font-size: 20px;
+        font-size: 15px;
         margin:0px 30px;
     }
     .réseaux{
         margin-top: 20px;
-        margin-bottom: 90px;
+        margin-bottom: 80px;
         display: flex;
     }
     .réseaux a {
-        margin: 12px 12px;
+        margin: 7px 7px;
     }
     .réseaux a img{
-        width:45px;
+        width:27px;
     }
     .form-img form{
-        width: 40%;
+        width: 35%;
         margin-top: 50px;
     
     }
     
     
     .form-img form input , textarea{
-        margin: 10px 0;
+        margin: 8px 0;
         padding: 8px;
         border-radius: 20px;
-        font-size: 22px;
+        font-size: 15px;
     }
     button{
         margin-top: 20px;
         margin-left: 20%;
-        padding: 10px 10px;
+        padding: 8px 8px;
         border-radius: 60px;
-        height: 60px;
+        height: 50px;
         font-size: 13px;
         margin-right: 16%;
         margin-bottom: 300px;
@@ -590,7 +612,7 @@ button{
 /* tablette */ 
 @media screen and (max-width: 830px){
     .form-img h3{
-        font-size: 18px;
+        font-size: 15px;
         margin:0px 30px;
     }
     .réseaux{
@@ -599,19 +621,19 @@ button{
         display: flex;
     }
     .réseaux a {
-        margin: 10px 10px;
+        margin: 7px 7px;
     }
     .réseaux a img{
-        width:40px;
+        width:27px;
     }
     .form-img form{
-        width: 50%;
+        width: 40%;
         margin-top: 40px;
     
     }
     .form-img form input , textarea{
-        margin: 10px 0;
-        padding: 12px;
+        margin: 7px 0;
+        padding: 10px;
         border-radius: 18px;
         font-size: 15px;
     }
@@ -643,7 +665,7 @@ button{
         margin: 5px 5px;
     }
     .réseaux a img{
-        width:2.3pc;
+        width:18px;
     }
     .form-img form{
         width: 55%;
@@ -683,7 +705,7 @@ button{
         margin: 3px 3px;
     }
     .réseaux a img{
-        width:2pc;
+        width:17px;
     }
     .form-img form{
         width: 55%;

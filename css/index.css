@@ -63,8 +63,8 @@ nav ul li a:hover:before{
     display: none;
     position: absolute; 
     right: 20px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: black;
     box-shadow: 
         0 0 5px rgb(0, 174, 255),
@@ -78,12 +78,12 @@ nav ul li a:hover:before{
 }
 .hamburger-icon{
     position: relative;
-    width: 46px;
-    height: 40px;
+    width: 38px;
+    height: 36px;
     margin-left: 10%;
     display: flex;
     align-items: center;
-    top: 10px;
+    top: 7px;
     transform: rotate(0);
     transition: 1s;
 }
@@ -107,15 +107,14 @@ nav ul li a:hover:before{
     transition: .3s;
     transition-delay: 1s;
 }
-.hamburger-icon span:nth-child(1){
-    bottom: 0;
+.hamburger-icon span:nth-child(1){ 
     top: 0;
     left: 0;
     width: 60%;
     transform: translateY(0);
 }
 .hamburger-menu.active span:nth-child(1){ 
-    top: -8px;
+    top: -10px;
     width: 100%;
     transform: translateY(25px);
     transition-delay: 0s;
@@ -139,7 +138,7 @@ nav ul li a:hover:before{
 }
 .hamburger-menu.active span:nth-child(3){ 
     left:-1px ;
-    bottom: 17px;
+    bottom: 15px;
     width: 100%;
     transform: rotate(90deg);
     transition-delay: 0s;
@@ -150,76 +149,19 @@ div.menu1{
 
 
 
-.texte1 h1{
-    display: inline-block; 
-    vertical-align: top;
-}  
-.animated-text{
-    display: inline-block; 
-    height: 60px;
-    overflow: hidden;
-    color: yellow;
-}
-.animated-text div{
-    animation: 8s wordChange;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(1); 
- }
-.animated-text span{
-    position: relative; 
-    font-size: 60px; 
-    left: 2%; 
-    display: block;
-}
-.animated-text span::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 100%; 
-    
-}
-@keyframes textType{
-    0%{
-        left: 0;
-    }
-    50%{
-        left: 100%;
-    }
-    100%{
-        left: 0;
-    } 
-
-}
-
-@keyframes wordChange{
-    0%{
-        margin-top: 0;
-    }
-    33.333%{
-        margin-top: -68px;
-    }
-    66.666%{
-        margin-top: -138px;
-    }
-    100%{
-        margin-top: 0;
-    } 
-
-}
  
  
  
 @media screen and (max-width: 1100px) { 
     .logo{ 
-        margin: 20px 30px;
-        width: 150px;
+        width: 100px; 
+        margin: 15px 50px;
     }
     nav ul li{ 
-        margin:0 7px ; 
-        margin-top:  20px;
+        margin:15px 5px ; 
     }  
     nav ul li a{ 
-        font-size: 15px;
+        font-size: 11px;
     } 
     
  
@@ -229,7 +171,16 @@ div.menu1{
     .logo{  
         margin-left: 42%;
         margin-top: 30px ;
-        width: 130px;
+        width: 110px;
+    }
+    .top{  
+        z-index: 120 ;
+        margin-left: 42%;
+        margin-top: 30px ;
+        width: 110px;
+    }
+    .bod{  
+        position: fixed; 
     }
     .menu{ 
         width: 100%; 
@@ -246,10 +197,10 @@ div.menu1{
         z-index: 110;
     }  
     nav ul li{
-        margin:  20px 0 ; 
+        margin:  15px 0 ; 
     } 
     nav ul li a{ 
-        font-size:25px;
+        font-size:20px;
     } 
     .hamburger-menu{ 
         display: block;  
@@ -284,47 +235,56 @@ div.menu1{
     } 
     .menu1 p{ 
         color: white;
-        font-size: 30px;
+        font-size: 20px;
     } 
     .menu2{ 
         margin-top:5%; 
     }
     .menu2 img{ 
-        width: 45px; 
-        margin-left:15px;
+        width: 35px; 
+        margin-left:10px;
     } 
 }
 /* phone */
 @media screen and (max-width: 500px){ 
     nav{ 
-        height: 80px; 
+        height: 70px; 
         border-radius: 0 0 30px 30px;   
     
     }
     .logo{ 
         margin-top: 20px;
-        width: 90px;
+        width: 80px;
         margin-left: 40%;
     }
+    .top{ 
+        z-index: 120 ;
+        margin-top: 20px;
+        width: 80px;
+        margin-left: 40%;
+    }
+    .bod{  
+        position: fixed; 
+    }
     nav ul li{
-        margin:  22px 0 ; 
+        margin:  12px 0 ; 
     } 
     nav ul li a{ 
-        font-size:18px;
+        font-size:16px;
     } 
     .hamburger-menu{  
         right: 10px;
-        width: 40px;
-        height: 40px; 
+        width: 35px;
+        height: 35px; 
         top: 15px; 
-        border-radius: 10px;
+        border-radius: 7px;
     }
     .hamburger-icon{
         position: relative;
-        width: 30px;
-        height: 28px;
-        margin-left: 10%; 
-        top: 6px; 
+        width: 28px;
+        height: 25px;
+        margin-left: 5%; 
+        top: 4px; 
     }  
     .hamburger-icon span{ 
         box-shadow: 
@@ -339,7 +299,7 @@ div.menu1{
     }  
     .hamburger-menu.active span:nth-child(3){
         left: 0px;
-        bottom: 10.2px; 
+        bottom: 8px; 
     } 
     .men{  
         display: flex; 
@@ -359,14 +319,15 @@ div.menu1{
     } 
     .menu1 p{ 
         color: white;
-        font-size: 20px;
+        font-size: 16px;
     } 
-    .menu2{ 
+    .menu2{  
+        width: 13pc;
         margin-top:5%; 
     }
     .menu2 img{ 
-        width: 30px; 
-        margin-left:10px;
+        width: 20px; 
+        margin-left:4px;
     } 
 }
 
@@ -377,15 +338,24 @@ div.menu1{
     
     }
     .logo{ 
-        margin-top: 15px;
-        width: 85px;
-        margin-left: 35%;
+        margin-top: 20px;
+        width: 70px;
+        margin-left: 40%;
+    }
+    .top{ 
+        margin-top: 20px;  
+        width: 70px; 
+        z-index: 120 ;
+        margin-left: 40%;
+    } 
+    .bod{  
+        position: fixed; 
     }
     nav ul li{
-        margin:  18px 0 ; 
+        margin:  11px 0 ; 
     } 
     nav ul li a{ 
-        font-size:15px;
+        font-size:14px;
     } 
     .hamburger-menu{  
         right: 5px;
@@ -433,14 +403,15 @@ div.menu1{
     } 
     .menu1 p{ 
         color: white;
-        font-size: 18px;
+        font-size: 14px;
     } 
     .menu2{ 
+        width: 10pc;
         margin-top:5%; 
     }
     .menu2 img{ 
-        width: 27px; 
-        margin-left:8px;
+        width: 17px; 
+        margin-left:3.5px;
     } 
 }
 
@@ -454,7 +425,7 @@ div.menu1{
     background: url('../img/img1.JPG');
     background-size: cover; 
     width: 100%;
-    height: 100vh;   
+    height: 50pc;   
 } 
 .texte1{
     padding: 12pc 0;
@@ -465,10 +436,12 @@ div.menu1{
 .texte1 h1{
     font-size: 60px;    
     margin-bottom: 70px; 
+    display: inline-block; 
+    vertical-align: top;
 }
 .texte1 p{
     font-size: 17px;
-    line-height: 1.5;
+    line-height: 1.7;
     margin-bottom: 90px;
     padding-right: 45%;
 }
@@ -484,53 +457,161 @@ div.menu1{
 .texte1 a:hover{
     background-color: rgb(0, 174, 255);
     color: white;
-} 
+}  
+ 
+ 
+ 
+.animated-text{
+    display: inline-block; 
+    height: 60px;
+    overflow: hidden;
+    color: yellow;
+}
+.animated-text div{
+    animation: 8s wordChange;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1); 
+ }
+.animated-text span{
+    position: relative; 
+    font-size: 60px; 
+    left: 2%; 
+    display: block;
+}
+.animated-text span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%; 
+    
+}
+@keyframes textType{
+    0%{
+        left: 0;
+    }
+    50%{
+        left: 100%;
+    }
+    100%{
+        left: 0;
+    } 
+
+}
+
+@keyframes wordChange{
+    0%{
+        margin-top: 0;
+    }
+    25%{
+        margin-top: -68px;
+    }
+    50%{
+        margin-top: -138px;
+    }
+    75%{
+        margin-top: -206px;
+    }
+    100%{
+        margin-top: 0;
+    } 
+
+}
+ 
 @media screen and (max-width: 1100px){ 
     .container{  
-        height: 46pc;   
+        height: 45pc;   
     }  
     .texte1{
-        padding:  8pc 0; 
+        padding:  11pc 0; 
         margin-left: 7%; 
     }
-    .texte1 h1{ 
-        margin-top: 70px;
-        font-size:80px; 
+    .texte1 h1{  
+        font-size:50px; 
         margin-bottom: 50px;
     }
     .texte1 p{
-        font-size: 20px;
+        font-size: 15px;
         line-height: 1.5;
         margin-bottom: 50px;
-        padding-right: 35%;
+        padding-right: 45%;
     }
     .texte1 a{ 
-        font-size: 24px; 
-        padding: 10px 15px; 
+        font-size: 15px; 
+        padding: 7px 10px; 
+    }
+    .animated-text{ 
+        height: 50px; 
+    }
+    .animated-text span{ 
+        font-size: 50px;  
+    }
+    @keyframes wordChange{
+        0%{
+            margin-top: 0;
+        }
+        25%{
+            margin-top: -59px;
+        }
+        50%{
+            margin-top: -118px;
+        }
+        75%{
+            margin-top: -177px;
+        }
+        100%{
+            margin-top: 0;
+        } 
+    
     }
 }
+ 
+ 
+ 
 /* tablette */
 @media screen and (max-width: 830px){ 
     .container{  
         height: 40pc;   
     } 
-    .texte1 h1{ 
-        margin-top: 20px;
-        font-size:65px; 
-        margin-bottom: 30px;
-    }  
+    .texte1 h1{  
+        font-size:40px; 
+        margin-bottom: 40px;
+    } 
     .texte1 p{
-        font-size: 20px;
+        font-size: 16px;
         line-height: 1.5;
         margin-bottom: 40px;
         padding-right: 35%;
     }
     .texte1 a{ 
-        font-size: 20px;
+        font-size: 15px;
         border: 2px solid  rgb(0, 174, 255);
-        padding: 10px 10px;
+        padding: 7px 7px;
         border-radius: 20px;
         transition: 0.3s; 
+    }
+    .animated-text{ 
+        height: 40px; 
+    }
+    .animated-text span{ 
+        font-size: 40px;  
+    }
+    @keyframes wordChange{
+        0%{
+            margin-top: 0;
+        }
+        25%{
+            margin-top: -45px;
+        }
+        50%{
+            margin-top: -90px;
+        }
+        75%{
+            margin-top: -135px;
+        }
+        100%{
+            margin-top: 0;
+        } 
+    
     }
 } 
 /* phone */
@@ -539,51 +620,96 @@ div.menu1{
         height: 33pc;   
     } 
     .texte1{
-        padding:  1pc 0; 
+        padding:  8pc 0; 
         margin-left: 7%; 
     }
-    .texte1 h1{ 
-        margin-top: 80px;
-        font-size:40px; 
-        margin-bottom: 10px;
+    .texte1 h1{  
+        font-size:30px; 
+        margin-bottom: 30px;
     }
     .texte1 p{
-        font-size: 15px;
+        font-size: 14px;
         line-height: 1.5;
         margin-bottom: 40px;
         padding-right: 20%;
     }
     .texte1 a{ 
-        font-size: 15px;
+        font-size: 14px;
         border: 2px solid  rgb(0, 174, 255);
         padding: 5px 10px;
         border-radius: 20px;
         transition: 0.3s; 
+    }
+    .animated-text{ 
+        height: 30px;  
+    }
+    .animated-text span{ 
+        font-size: 30px;  
+    }
+    @keyframes wordChange{
+        0%{
+            margin-top: 0;
+        }
+        25%{
+            margin-top: -34px;
+        }
+        50%{
+            margin-top: -68px;
+        }
+        75%{
+            margin-top: -102px;
+        }
+        100%{
+            margin-top: 0;
+        } 
+    
     }
 }
 
 @media screen and (max-width: 350px){
-    .texte1{
-        padding:  1px 0; 
+    .texte1{ 
         margin-left: 5%; 
     }
-    .texte1 h1{ 
-        margin-top: 120px;
-        font-size:30px; 
-        margin-bottom: 5px;
+    .texte1 h1{  
+        font-size:27px; 
+        margin-bottom: 30px;
     }
     .texte1 p{
-        font-size: 14px;
+        font-size: 13px;
         line-height: 1.5;
         margin-bottom: 25px;
-        padding-right: 15%;
+        padding-right: 20%;
     }
     .texte1 a{ 
-        font-size: 13px;
+        font-size: 12px;
         border: 2px solid  rgb(0, 174, 255);
-        padding: 5px 10px;
+        padding: 5px 7px;
         border-radius: 20px;
         transition: 0.3s; 
+    }
+    .animated-text{ 
+        height: 27px;  
+    }
+    .animated-text span{ 
+        font-size: 27px;  
+    }
+    @keyframes wordChange{
+        0%{
+            margin-top: 0;
+        }
+        25%{
+            margin-top: -31px;
+        }
+        50%{
+            margin-top: -62px;
+        }
+        75%{
+            margin-top: -93px;
+        }
+        100%{
+            margin-top: 0;
+        } 
+    
     }
 }
  
@@ -594,7 +720,7 @@ div.menu1{
 
     margin-top: -90px;
     background-color:  rgb(8, 97, 138);
-    border-radius: 80px 80px 0 0;
+    border-radius: 70px 70px 0 0;
     width: 100%;
 }
 .consiste{
@@ -620,15 +746,15 @@ div.menu1{
         margin-top: -90px; 
     } 
     .consiste h2{
-        font-size: 35px;
-        padding: 60px 0; 
+        font-size: 22px;
+        padding: 55px 0; 
     }
     .consiste p{
-        font-size: 20px;
+        font-size: 15px;
         line-height: 40px;
         color:white ;
         width: 70%;
-        margin-bottom: 7pc;  
+        margin-bottom: 5pc;  
     }
 } 
 /* tablette */
@@ -637,12 +763,12 @@ div.menu1{
         border-radius: 70px 70px 0 0; 
     } 
     .consiste h2{
-        font-size: 30px;
+        font-size: 22px;
         padding: 60px 0; 
     }
     .consiste p{
-        font-size: 20px;
-        line-height: 40px;
+        font-size: 16px;
+        line-height: 35px;
         color:white ;
         width: 70%;
         margin-bottom: 5pc;  
@@ -660,13 +786,13 @@ div.menu1{
         margin-left: 7%; 
     }
     .consiste h2{
-        font-size: 20px;
+        font-size: 18px;
         padding: 50px 0;
         color: white;
     }
     .consiste p{
         margin-top: -20px;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 30px;
         color:white ;
         width: 80%;
@@ -684,13 +810,13 @@ div.menu1{
         margin-left: 7%; 
     }
     .consiste h2{
-        font-size: 18px;
+        font-size: 15px;
         padding: 50px 0;
         color: white;
     }
     .consiste p{
         margin-top: -20px;
-        font-size: 14px;
+        font-size: 13px;
         line-height: 30px;
         color:white ;
         width: 90%;
@@ -703,7 +829,7 @@ div.menu1{
 
 .carousel{
     width: 100%;
-    height: 100vh;
+    height: 47pc;
     overflow: hidden;
     position: relative;
 }
@@ -718,7 +844,7 @@ div.menu1{
 }
 .carousel .list .item .content{ 
     position: absolute;
-    top: 10vh;
+    top: 7pc;
     width: 70%;
     max-width: 80%;
     left: 7%; 
@@ -765,7 +891,7 @@ div.menu1{
 /* thumbnail */
 .thumbnail{
     position: absolute;
-    margin-top: 50vh;
+    margin-top: 24pc;
     left: 50%;
     width: max-content;
     z-index: 100;
@@ -774,7 +900,7 @@ div.menu1{
 }
 .thumbnail .item{
     width: 140px;
-    height: 220px;
+    height: 15pc;
     flex-shrink: 0;
     position: relative;
 }
@@ -798,7 +924,7 @@ div.menu1{
 /* arrow */
 .arrows{
     position: absolute;
-    top: 60vh;
+    top: 28pc;
     left: 16%;
     width: 250px;
     max-width: 30%;
@@ -857,10 +983,10 @@ div.menu1{
 /* effect next click */
 .carousel.next .list .item:nth-child(1) img{
     width: 140px;
-    height: 220px;
+    height: 15pc;
     position: absolute;
     left: 50%;
-    bottom: 19.2vh;
+    bottom:8pc;
     border-radius: 15px;
     animation: showImage .5s linear 1 forwards;
 }
@@ -905,10 +1031,10 @@ div.menu1{
 @keyframes outImage{
     to{
         width: 140px;
-        height: 220px;
+        height: 15pc;
         border-radius: 15px;
         left: 50%;
-        bottom: 19.2vh;
+        bottom: 8pc;
     }
 }
 .carousel.prev .thumbnail .item:nth-child(1){
@@ -958,10 +1084,10 @@ div.menu1{
 @media screen and (max-width: 1100px){ 
     .carousel{
         width: 100%;
-        height: 45pc; 
+        height: 40pc; 
     }  
     .carousel .list .item .content{
-        position: absolute;
+        position: absolute; 
         top: 4pc;
         width: 900px; 
         left: 7%; 
@@ -969,52 +1095,51 @@ div.menu1{
     }  
     .carousel .list .item .content .author{ 
         letter-spacing: 12px;
-        font-size: 16px; 
+        font-size: 12px; 
     }
     .carousel .list .item .content .title{
         font-weight: bold;
-        font-size: 70px; 
+        font-size: 35px; 
     }
     .carousel .list .item .content .des{ 
         margin-top:10px;
-        font-size: 20px; 
+        font-size: 15px; 
         line-height: 1.2em;
     } 
     .content .bouton a{
-        padding: 10px 10px; 
+        padding: 7px 7px; 
         font-size: 13px;
         margin-top: 30px;
-        letter-spacing: 5Px;
+        letter-spacing: 4Px;
         margin-left: 15px; 
     } 
     
     /* thumbnail */
-    .thumbnail{ 
-        margin-top: 22pc; 
+    .thumbnail{  
+        margin-top:19pc;
         gap: 10px;
     }
     .thumbnail .item{
-        width: 160px;
-        height: 250px; 
+        width: 130px; 
+        height: 13.5pc;
     }   
     /* arrow */
-    .arrows{ 
-        top: 28pc;
-        left: 15%;
+    .arrows{  
         width: 300px;
         max-width: 30%; 
+        top: 22pc;
     }
     .arrows button{
-        width: 60px;
-        height: 60px; 
+        width: 35px;
+        height: 35px; 
         font-size: 30px; 
     }  
     /* effect next click */
     .carousel.next .list .item:nth-child(1) img{
-        width: 160px;
-        height: 250px; 
-        left: 50%;  
-        bottom: 118px;
+        width: 130px; 
+        height: 13.5pc;
+        left: 50%;   
+        bottom: 7.5pc;
     } 
     .carousel.next .thumbnail .item:nth-last-child(1){
         width: 0;
@@ -1023,7 +1148,7 @@ div.menu1{
     }
     @keyframes showThumbnail{
         to{
-            width: 160px;
+            width: 130px;
         }
     }
     .carousel.next .thumbnail{
@@ -1041,11 +1166,11 @@ div.menu1{
     }
     @keyframes outImage{
         to{
-            width: 160px;
-            height: 250px;
-            border-radius: 20px;
-            left: 50%;
-            bottom: 118px;
+            width: 130px; 
+            height: 13.5pc;
+            border-radius: 15px;
+            left: 50%; 
+            bottom: 7.5pc;
         }
     } 
     /* time */
@@ -1057,63 +1182,63 @@ div.menu1{
 @media screen and (max-width: 830px){ 
     .carousel{
         width: 100%;
-        height: 50pc; 
+        height: 47pc; 
     }  
     .carousel .list .item .content{
         position: absolute;
-        top: 4pc;
+        top: 5pc;
         width: 900px; 
         left: 7%; 
         padding-right: 30%; 
     }  
     .carousel .list .item .content .author{ 
         letter-spacing: 12px;
-        font-size: 17px; 
+        font-size: 12px; 
     }
     .carousel .list .item .content .title{
         font-weight: bold;
-        font-size: 60px; 
+        font-size: 30px; 
     }
     .carousel .list .item .content .des{ 
         margin-top:10px;
-        font-size: 22px; 
+        font-size: 16px; 
         line-height: 1.2em;
     } 
     .content .bouton a{
-        padding: 10px 10px; 
-        font-size: 16px;
-        margin-top: 30px;
+        padding: 7px 7px; 
+        font-size: 15px;
+        margin-top: 40px;
         letter-spacing: 5Px;
         margin-left: 15px; 
     } 
     
     /* thumbnail */
     .thumbnail{ 
-        margin-top: 26pc; 
+        margin-top: 24pc; 
         gap: 10px;
     }
     .thumbnail .item{
-        width: 160px;
-        height: 250px; 
+        width: 140px;
+        height: 15pc; 
     }   
     /* arrow */
     .arrows{ 
-        top: 32pc;
+        top: 28pc;
         left: 15%;
         width: 300px;
         max-width: 30%; 
     }
     .arrows button{
-        width: 60px;
-        height: 60px; 
-        font-size: 30px; 
+        width: 45px;
+        height: 45px; 
+        font-size: 25px; 
     }  
     /* effect next click */
     .carousel.next .list .item:nth-child(1) img{
-        width: 160px;
-        height: 250px; 
+        width: 140px;
+        height: 15pc; 
         left: 50%; 
-        bottom: 134px;
+        bottom: 8px;
     } 
     .carousel.next .thumbnail .item:nth-last-child(1){
         width: 0;
@@ -1122,11 +1247,11 @@ div.menu1{
     }
     @keyframes showThumbnail{
         to{
-            width: 160px;
+            width: 140px;
         }
     }
     .carousel.next .thumbnail{
-        transform: translateX(160px);
+        transform: translateX(140px);
         animation: transformThumbnail .5s linear 1 forwards;
     }
     @keyframes transformThumbnail{
@@ -1140,11 +1265,11 @@ div.menu1{
     }
     @keyframes outImage{
         to{
-            width: 160px;
-            height: 250px;
-            border-radius: 20px;
+            width: 140px;
+            height: 15pc;
+            border-radius: 15px;
             left: 50%;
-            bottom: 134px;
+            bottom: 8pc;
         }
     } 
     /* time */
@@ -1160,49 +1285,49 @@ div.menu1{
     }  
     .carousel .list .item .content{
         position: absolute;
-        top: 13%;
+        top: 5pc;
         width: 70% ; 
         left: 5%; 
         padding-right: 0%; 
     }  
     .carousel .list .item .content .author{ 
         letter-spacing: 10px;
-        font-size: 12px; 
+        font-size: 10px; 
     }
     .carousel .list .item .content .title{
         font-weight: bold;
-        font-size: 38px; 
+        font-size: 30px; 
     }
     .carousel .list .item .content .des{ 
         margin-top: 10px;
-        font-size: 16px;
+        font-size: 14px;
     } 
     .content .bouton a{
-        padding: 13px 17px; 
+        padding: 7px 10px; 
         font-size: 12px;
         margin-top: 30px;
-        letter-spacing: 1Px;
+        letter-spacing: 2Px;
         margin-left: 10px; 
     } 
     
     /* thumbnail */
     .thumbnail{ 
-        margin-top: 24.7pc; 
+        margin-top: 23pc; 
         gap: 5px;
     }
     .thumbnail .item{
         width:110px;
-        height: 180px; 
+        height: 12pc; 
     }   
     .thumbnail .item img{
         border-radius: 10px;
     }
     .thumbnail .item .content .title{ 
-        font-size: 11px;
+        font-size: 10px;
     }
     /* arrow */
     .arrows{ 
-        top: 65%;
+        top: 25pc;
         right: 55%;
         width: 300px;
         max-width: 30%; 
@@ -1215,9 +1340,9 @@ div.menu1{
     /* effect next click */
     .carousel.next .list .item:nth-child(1) img{
         width: 110px;
-        height: 180px; 
+        height: 12pc; 
         left: 50%; 
-        bottom: 64px;
+        bottom: 5pc;
         border-radius: 10px;
     } 
     .carousel.next .thumbnail .item:nth-last-child(1){
@@ -1246,10 +1371,10 @@ div.menu1{
     @keyframes outImage{
         to{
             width: 110px;
-            height: 180px;
+            height: 12pc;
             border-radius: 10px;
             left: 50%;
-            bottom: 64px;
+            bottom: 5pc;
         }
     } 
     /* time */
@@ -1261,11 +1386,11 @@ div.menu1{
 @media screen and (max-width: 350px){
     .carousel{
         width: 100%;
-        height: 32pc; 
+        height: 37pc; 
     }  
     .carousel .list .item .content{
         position: absolute;
-        top: 10%;
+        top: 5pc;
         width: 1000px; 
         left: 5%; 
         padding-right: 0%; 
@@ -1276,38 +1401,38 @@ div.menu1{
     }
     .carousel .list .item .content .title{
         font-weight: bold;
-        font-size: 35px; 
+        font-size: 28px; 
     }
     .carousel .list .item .content .des{ 
         margin-top: 10px;
-        font-size: 15px;
+        font-size: 14px;
     } 
     .content .bouton a{
-        padding: 10px 5px; 
-        font-size: 12px;
+        padding: 5px 5px; 
+        font-size: 11px;
         margin-top: 20px;
-        letter-spacing: 1Px;
-        margin-left: 2px; 
+        letter-spacing: 2Px;
+        margin-left: 5px; 
     } 
     
     /* thumbnail */
     .thumbnail{ 
-        margin-top: 18pc; 
+        margin-top: 20pc; 
         gap: 3px;
     }
     .thumbnail .item{
         width:100px;
-        height: 160px; 
+        height: 12pc; 
     }   
     .thumbnail .item img{
         border-radius: 10px;
     }
     .thumbnail .item .content .title{ 
-        font-size: 9px;
+        font-size: 7px;
     }
     /* arrow */
     .arrows{ 
-        top: 65%;
+        top: 24pc;
         right: 60%;
         width: 300px;
         max-width: 30%; 
@@ -1320,9 +1445,9 @@ div.menu1{
     /* effect next click */
     .carousel.next .list .item:nth-child(1) img{
         width: 100px;
-        height: 160px; 
+        height: 12pc; 
         left: 50%; 
-        bottom: 64px;
+        bottom: 5pc;
         border-radius: 10px;
     } 
     .carousel.next .thumbnail .item:nth-last-child(1){
@@ -1351,10 +1476,10 @@ div.menu1{
     @keyframes outImage{
         to{
             width: 100px;
-            height: 160px;
+            height: 12pc;
             border-radius: 10px;
             left: 50%;
-            bottom: 64px;
+            bottom: 5pc;
         }
     } 
     /* time */
@@ -1393,11 +1518,11 @@ div.menu1{
  
 @media screen and (max-width: 1100px){  
     .title h2{
-        font-size: 30px;
-        padding: 70px 0; 
+        font-size: 22px;
+        padding: 55px 0; 
     }
     .title p{ 
-        font-size: 20px;
+        font-size: 15px;
         margin-bottom: 80px; 
     
     } 
@@ -1409,11 +1534,11 @@ div.menu1{
         border-radius: 70px; 
     }
      .title h2{
-         font-size: 30px;
-         padding: 70px 0; 
+         font-size: 22px;
+         padding: 55px 0; 
      }
      .title p{ 
-         font-size: 20px;
+         font-size: 16px;
          margin-bottom: 80px; 
      
      } 
@@ -1430,16 +1555,16 @@ div.menu1{
         z-index: 100;  
     }
     .title h2{
-        font-size: 22px;
+        font-size: 18px;
         padding: 50px 0;
         color: white;
         margin-left: 7%;
     }
     .title p{
         color: white;
-        font-size: 15px;
+        font-size: 14px;
         margin-bottom: 70px;
-        margin-left: 10%;
+        margin-left: 7%;
     
     } 
 }
@@ -1453,14 +1578,14 @@ div.menu1{
         z-index: 100;  
     }
     .title h2{
-        font-size: 20px;
+        font-size: 16px;
         padding: 40px 0;
         color: white;
         margin-left: 5%;
     }
     .title p{
         color: white;
-        font-size: 15px;
+        font-size: 13px;
         margin-bottom: 40px;
         margin-left: 5%;
     
@@ -1522,18 +1647,18 @@ div.menu1{
     } 
     
     .contact1 h2{
-        font-size: 30px; 
+        font-size: 22px; 
         
     }
     .contact1 p{
-        font-size: 20px;
-        line-height: 40px; 
-        margin-bottom: 70px;
+        font-size: 15px;
+        line-height: 30px; 
+        margin-bottom: 50px;
     }
     
     .contact1 a{ 
-        font-size: 20px; 
-        padding: 10px 15px; 
+        font-size: 15px; 
+        padding: 7px 10px; 
     } 
 }
 /* tablette */
@@ -1546,18 +1671,18 @@ div.menu1{
     } 
     
     .contact1 h2{
-        font-size: 30px; 
+        font-size: 22px; 
         
     }
     .contact1 p{
-        font-size: 20px;
-        line-height: 36px; 
-        margin-bottom: 70px;
+        font-size: 16px;
+        line-height: 30px; 
+        margin-bottom: 50px;
     }
     
     .contact1 a{ 
-        font-size: 20px; 
-        padding: 10px 15px; 
+        font-size: 15px; 
+        padding: 7px 10px; 
     } 
 }
 /* phone1 */
@@ -1576,19 +1701,19 @@ div.menu1{
         
     }
     .contact1 h2{
-        font-size: 25px; 
+        font-size: 18px; 
         padding: 50px 0;
     }
     .contact1 p{
-        font-size: 15px;
+        font-size: 14px;
         line-height: 20px; 
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         padding-right: 20%;
         margin-top: -20px;
     }
     
     .contact1 a{ 
-        font-size: 15px; 
+        font-size: 14px; 
         padding: 5px 10px;
         border: 1px solid  rgb(223, 189, 0); 
     } 
@@ -1608,20 +1733,20 @@ div.menu1{
         
     }
     .contact1 h2{
-        font-size: 25px; 
+        font-size: 18px; 
         padding: 50px 0;
     }
     .contact1 p{
-        font-size: 15px;
+        font-size: 13Px;
         line-height: 20px; 
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         padding-right: 20%;
         margin-top: -20px;
     }
     
     .contact1 a{ 
-        font-size: 15px; 
-        padding: 5px 10px;
+        font-size: 13px; 
+        padding: 5px 5px;
         border: 1px solid  rgb(223, 189, 0); 
     } 
 }
@@ -1701,25 +1826,25 @@ div.menu4 img{
         margin-top: -100px; 
     } 
     .fin1 p{
-        font-size: 22px; 
+        font-size: 16px; 
     }
     .fin1 a{ 
-        font-size: 20px; 
-        padding: 15px 15px; 
+        font-size: 15px; 
+        padding: 7px 10px; 
     }  
     .log{
         margin-top: 12pc;
-        width: 12pc;
+        width: 120px;
         margin-bottom: 20px;
     }
     .fin2 ul li{
-        margin-top: 40px;
+        margin-top: 35px;
     }
     .fin2 ul li a{
-        font-size: 22px; 
+        font-size: 16px; 
     } 
     .fin2 p{ 
-        font-size: 22px;
+        font-size: 16px;
         margin-top: 100px;
     }  
     .menu3{ 
@@ -1727,11 +1852,11 @@ div.menu4 img{
     } 
     .menu3 p{ 
         color: white;
-        font-size: 22px;
+        font-size: 16px;
     }  
     div.menu4 img{ 
-        width: 40px; 
-        margin-left: 2%;
+        width: 30px; 
+        margin-left: 1%;
     } 
 }
 /* tablette */
@@ -1740,25 +1865,25 @@ div.menu4 img{
         margin-top: -100px; 
     } 
     .fin1 p{
-        font-size: 22px; 
+        font-size: 16px; 
     }
     .fin1 a{ 
-        font-size: 20px; 
-        padding: 10px 15px; 
+        font-size: 15px; 
+        padding: 7px 10px; 
     }  
     .log{
-        margin-top: 12pc;
-        width: 10pc;
+        margin-top: 10pc;
+        width: 110px;
         margin-bottom: 20px;
     }
     .fin2 ul li{
         margin-top: 40px;
     }
     .fin2 ul li a{
-        font-size: 22px; 
+        font-size: 16px; 
     } 
     .fin2 p{ 
-        font-size: 22px;
+        font-size: 16px;
         margin-top: 100px;
     }  
     .menu3{ 
@@ -1766,11 +1891,11 @@ div.menu4 img{
     } 
     .menu3 p{ 
         color: white;
-        font-size: 22px;
+        font-size: 16px;
     }  
     div.menu4 img{ 
-        width: 36px; 
-        margin-left: 2%;
+        width: 30px; 
+        margin-left: 1%;
     } 
 }
 /* phone1 */
@@ -1781,35 +1906,35 @@ div.menu4 img{
     } 
     .fin1 p{
         margin-top: 20px;
-        font-size: 15px; 
+        font-size: 14px; 
         padding: 0 15px;
     }
     .fin1 a{ 
-        font-size: 15px; 
+        font-size: 14px; 
         padding: 5px 10px; 
         border: 1px solid  rgb(255, 255, 255);
     }  
     .log{
         margin-top: 8pc;
-        width: 8pc;
+        width: 80px;
         margin-bottom: 10px;
     }
     .fin2 ul li{
         margin-top: 20px;
     }
     .fin2 ul li a{
-        font-size: 15px; 
+        font-size: 14px; 
     } 
     .fin2 p{ 
-        font-size: 15px;
+        font-size: 14px;
         margin-top: 70px;
     }  
     .menu1 p{ 
         color: white;
-        font-size: 17px;
+        font-size: 14px;
     }  
     div.menu2 img{ 
-        width: 36px; 
+        width: 30px; 
         margin-left: 3%;
     } 
 }
@@ -1821,36 +1946,36 @@ div.menu4 img{
     } 
     .fin1 p{
         margin-top: 20px;
-        font-size: 15px; 
+        font-size: 13px; 
         padding: 0 15px;
     }
     .fin1 a{ 
-        font-size: 15px; 
-        padding: 5px 10px; 
+        font-size: 13px; 
+        padding: 5px 5px; 
         border: 1px solid  rgb(255, 255, 255);
     }  
     .log{
         margin-top: 8pc;
-        width: 8pc;
+        width: 70px;
         margin-bottom: 10px;
     }
     .fin2 ul li{
         margin-top: 20px;
     }
     .fin2 ul li a{
-        font-size: 15px; 
+        font-size: 13px; 
     } 
     .fin2 p{ 
-        font-size: 15px;
-        margin-top: 70px;
+        font-size: 13px;
+        margin-top: 50px;
     } 
       
     .menu1 p{ 
         color: white;
-        font-size: 15px;
+        font-size: 13px;
     }  
     div.menu2 img{ 
-        width: 30px; 
+        width: 25px; 
         margin-left: 2%;
     } 
 }

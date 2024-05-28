@@ -1,9 +1,13 @@
 const hamburgerWrapper = document.querySelector('.hamburger-menu'); 
 const menu = document.querySelector('.menu');
+const logo = document.querySelector('.logo');
+const body = document.querySelector('body');
 
 hamburgerWrapper.addEventListener('click', () => {
     hamburgerWrapper.classList.toggle('active') 
     menu.classList.toggle('mobile-menu')
+    logo.classList.toggle('top')
+    body.classList.toggle('bod')
 })
 
 
