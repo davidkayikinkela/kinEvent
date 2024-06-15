@@ -206,7 +206,7 @@ div.menu1{
         margin:  15px 0 ; 
     } 
     nav ul li a{ 
-        font-size:11px;
+        font-size:20px;
     } 
     .hamburger-menu{ 
         display: block;  
@@ -274,7 +274,7 @@ div.menu1{
         margin:  12px 0 ; 
     } 
     nav ul li a{ 
-        font-size:8px;
+        font-size:16px;
     } 
     .hamburger-menu{  
         right: 10px;
@@ -356,7 +356,7 @@ div.menu1{
         margin:  11px 0 ; 
     } 
     nav ul li a{ 
-        font-size:7px;
+        font-size:14px;
     } 
     .hamburger-menu{  
         right: 5px;
@@ -421,6 +421,7 @@ div.menu1{
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .corp h3 a{
     color: blue;
@@ -441,6 +442,7 @@ div.menu1{
         margin-bottom: 10px;
         padding: 10px 40px; 
         margin-left: -2%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
     .corp h3 a{
         color: blue;
@@ -462,6 +464,7 @@ div.menu1{
         margin-bottom: 10px;
         padding: 10px 40px; 
         margin-left: -2%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
     .corp h3 a{
         color: blue;

@@ -14,10 +14,10 @@ const logo = document.querySelector('.logo');
 const body = document.querySelector('body');
 
 hamburgerWrapper.addEventListener('click', () => {
-    hamburgerWrapper.classList.toggle('actives') 
-    menu.classList.toggle('mobile-menu')
-    logo.classList.toggle('top')
-    body.classList.toggle('bod')
+    hamburgerWrapper.classList.toggle('active');
+    menu.classList.toggle('mobile-menu');
+    logo.classList.toggle('top');
+    body.classList.toggle('bod');
 })
 
 
@@ -173,7 +173,7 @@ window.addEventListener('load', () => {
 } );
  
 
-
+setTimeout( () => { 
 Notification.requestPermission( () => {
     if (Notification.permission == 'granted') { 
           
@@ -182,13 +182,35 @@ Notification.requestPermission( () => {
     } 
 }) 
 
-
+ 
 let notification = new Notification("DRCEvent" , { 
-    body: "Actualisation des événement. Jetez un coup d'oeil sur notre liste d'événement se déroulant en ce moment",
-    icon:"../icone/logo1.png",
-})
+    body: "Actualisation des événement. Jetez un coup d'oeil sur notre liste d'événement ",
+    icon:"../icone/logo2.png",
+} ) 
+    console.log('le premier délai est terminé');
+}, // 1sec * 1min * 1heure * 1jours
+1000 * 60 * 30 
+    )
+ 
+    // setTimeout( () => { 
+    //     Notification.requestPermission( () => {
+    //         if (Notification.permission == 'granted') { 
+                  
+    //         } else {
+    //             console.log('Veuillez accorder au navigateur la possibilité de recevoir des notifications !')
+    //         } 
+    //     }) 
+        
+         
+    //     let notification = new Notification("DRCEvent" , { 
+    //         body: "Actualisation des événement. Jetez un coup d'oeil sur notre liste d'événement ",
+    //         icon:"../icone/logo2.png",
+    //     } ) 
+    //         console.log('le deuxieme délai est terminé');
+    //     }, // 1sec * 1min * 1heure * 1jours
+    //     9000  
+    //         )
 
 notification.onclick = () => {
     window.open("../tout_nos_evenement.html" , "_blank");
-}
-
+} 

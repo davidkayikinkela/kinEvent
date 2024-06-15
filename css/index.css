@@ -985,13 +985,13 @@ div.menu1{
             margin-top: 0;
         }
         25%{
-            margin-top: -34px;
+            margin-top: -36px;
         }
         50%{
-            margin-top: -68px;
+            margin-top: -72px;
         }
         75%{
-            margin-top: -102px;
+            margin-top: -108px;
         }
         100%{
             margin-top: 0;
@@ -1032,13 +1032,13 @@ div.menu1{
             margin-top: 0;
         }
         25%{
-            margin-top: -31px;
+            margin-top: -33px;
         }
         50%{
-            margin-top: -62px;
+            margin-top: -66px;
         }
         75%{
-            margin-top: -93px;
+            margin-top: -99px;
         }
         100%{
             margin-top: 0;
@@ -1231,6 +1231,7 @@ div.menu1{
         margin-top: -20px;
         font-size: 14px;
         line-height: 30px;
+        letter-spacing: 0.1px;
         padding: 0 12%;
         color:white ; 
         margin-bottom: 50px;  
@@ -1286,6 +1287,7 @@ div.menu1{
         font-size: 13px;
         line-height: 28px;
         padding: 0 12%;
+        letter-spacing: 0.1px;
         color:white ; 
         margin-bottom: 50px;  
         animation: apparpt linear;
@@ -2434,6 +2436,7 @@ div.menu4 img{
     }
     .fin2 ul li{
         margin-top: 35px;
+        font-size: 16px; 
     }
     .fin2 ul li a{
         font-size: 16px; 
@@ -2473,6 +2476,7 @@ div.menu4 img{
     }
     .fin2 ul li{
         margin-top: 40px;
+        font-size: 16px; 
     }
     .fin2 ul li a{
         font-size: 16px; 
@@ -2516,6 +2520,7 @@ div.menu4 img{
     }
     .fin2 ul li{
         margin-top: 20px;
+        font-size: 14px;
     }
     .fin2 ul li a{
         font-size: 14px; 
@@ -2556,6 +2561,7 @@ div.menu4 img{
     }
     .fin2 ul li{
         margin-top: 20px;
+        font-size: 13px;
     }
     .fin2 ul li a{
         font-size: 13px; 
