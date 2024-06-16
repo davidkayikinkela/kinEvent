@@ -11,6 +11,8 @@ html{ scroll-behavior: smooth;}
 
 
 .section-l{ 
+    position: fixed;
+    z-index: 210;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,6 +76,8 @@ html{ scroll-behavior: smooth;}
 .fondu-out{
     opacity: 0;
     transition: opacity 0.2s ease-out;
+    width: 0%;
+    display: none;
     
 }
  
