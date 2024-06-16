@@ -156,7 +156,7 @@ const cookieBox = document.querySelector(".wrapper"),
     buttons = document.querySelectorAll(".button");
  
 window.addEventListener('load', () => {
-    loader.classList.add('.fondu-out');
+    loader.classList.add('fondu-out');
  
     if (document.cookie.includes("codinglab")) return; 
     cookieBox.classList.add("show");
