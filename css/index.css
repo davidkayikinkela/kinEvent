@@ -139,7 +139,7 @@ nav ul li{
 nav ul li a{
     position: relative;
     color: rgb(255, 255, 255);
-    font-size: 12px;
+    font-size: 11px;
     padding: 2px 0;
     text-transform: uppercase;
     top: 10px;  
@@ -257,18 +257,15 @@ div.menu1{
  
     
 
+  
  
-.dropdown{
+ select *{
+    box-sizing: border-box;
+}
+ select{opacity: 0.7;
     position: absolute;
     top: 70px;
     right: 20px;
-    
-}
- 
-.dropdown *{
-    box-sizing: border-box;
-}
-.select{
     background: #2a2f3b;
     color: white;
     display: flex;
@@ -279,10 +276,15 @@ div.menu1{
     padding: 7px;
     cursor: pointer;
     transition: background 0.3s;
-    width: 180px;
-    font-size: 14px; 
+    width: 150px;
+    font-size: 13px; 
 }
-.select-clicked{
+/* option{
+    font-size: 10px; 
+    
+} */
+ 
+/* .select-clicked{
     border: 2px #26489a solid;
     box-shadow: 0 0 2px #26489a;
      
@@ -336,7 +338,7 @@ div.menu1{
 .mennu-open{
     display: block;
     opacity: 1; 
-}
+} */
  
  
     
@@ -349,7 +351,7 @@ div.menu1{
         width: 8px; 
         margin: 30px 80px;
         opacity: 0; 
-        animation: apparitionlogpc 0.4s 1.3s ease-out forwards;
+        animation: apparitionlogpc 0.4s 2.3s ease-out forwards;
     } 
     @keyframes apparitionlogpc{ 
         100%{
@@ -365,39 +367,19 @@ div.menu1{
     nav ul li a{ 
         font-size: 11px;
     } 
-    .dropdown{ 
-        top: 55px;
-        right: 15px;
-        
-    } 
-    .select{ 
-        border-radius: 5px;
+    select{
+        position: absolute;
+        top: 60px;
+        right:10px; 
+        border-radius: 8px;
         padding: 5px; 
         width: 130px;
         font-size: 12px; 
     }
-    .select-clicked{
-        border: 2px #26489a solid;
-        box-shadow: 0 0 2px #26489a; 
-    }    
-    .caret{ 
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-top: 6px solid #fff; 
-     
-    } 
-    .mennu { 
-        padding: 3px 6px; 
-        border-radius: 5px; 
-        margin-top: 5px;  
-    }
-    .mennu li{
-        padding: 3px 2px; 
-        margin: 2px 0 ;
-        border-radius: 3px;
-        cursor: pointer; 
-        font-size: 12px;
-    }
+    /* option{
+        font-size: 9px; 
+        
+    } */
     .loader{ 
         width:35px;
         height: 35px;
@@ -414,7 +396,7 @@ div.menu1{
         margin-top: 40px ;
         width: 10px;
         opacity: 0; 
-        animation: apparitionlogtab 0.4s 1s ease-out forwards;
+        animation: apparitionlogtab 0.4s 2.3s ease-out forwards;
     }
  
     @keyframes apparitionlogtab{ 
@@ -497,39 +479,15 @@ div.menu1{
         width: 35px; 
         margin-left:10px;
     }  
-    .dropdown{ 
+    select{
+        position: absolute;
         top: 85px;
-        right: 15px;
-        
-    } 
-    .select{ 
-        border-radius: 5px;
+        right:10px; 
+        border-radius: 8px;
         padding: 5px; 
-        width: 120px;
+        width: 130px;
         font-size: 12px; 
-    }
-    .select-clicked{
-        border: 2px #26489a solid;
-        box-shadow: 0 0 2px #26489a; 
-    }    
-    .caret{ 
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-top: 6px solid #fff; 
-     
     } 
-    .mennu { 
-        padding: 3px 6px; 
-        border-radius: 5px; 
-        margin-top: 5px;  
-    }
-    .mennu li{
-        padding: 3px 2px; 
-        margin: 2px 0 ;
-        border-radius: 3px;
-        cursor: pointer; 
-        font-size: 12px;
-    }
     .loader{ 
         width:40px;
         height: 40px;
@@ -551,7 +509,7 @@ div.menu1{
         width: 6px;
         margin-left: 45%;
         opacity: 0; 
-        animation: apparitionlogpor 0.4s 1s ease-out forwards;
+        animation: apparitionlogpor 0.4s 2.3s ease-out forwards;
     }
    
     @keyframes apparitionlogpor{ 
@@ -636,39 +594,15 @@ div.menu1{
         width: 20px; 
         margin-left:4px;
     }  
-    .dropdown{ 
-        top: 65px;
-        right: 10px;
-        
-    } 
-    .select{ 
-        border-radius: 5px;
+    select{
+        position: absolute;
+        top: 60px;
+        right:10px; 
+        border-radius: 8px;
         padding: 5px; 
-        width: 80px;
-        font-size: 9px; 
-    }
-    .select-clicked{
-        border: 2px #26489a solid;
-        box-shadow: 0 0 2px #26489a; 
-    }    
-    .caret{ 
-        border-left: 3.5px solid transparent;
-        border-right: 3.5px solid transparent;
-        border-top: 5px solid #fff; 
-     
+        width: 90px;
+        font-size: 10px; 
     } 
-    .mennu { 
-        padding: 3px 6px; 
-        border-radius: 5px; 
-        margin-top: 5px;  
-    }
-    .mennu li{
-        padding: 2px 2px; 
-        margin: 2px 0 ;
-        border-radius: 1px;
-        cursor: pointer; 
-        font-size: 9px;
-    }
     .loader{ 
         width:35px;
         height: 35px;
@@ -690,7 +624,7 @@ div.menu1{
         width: 7px;
         margin-left: 45%;
         opacity: 0; 
-        animation: apparitionlogport 0.4s 1s ease-out forwards;
+        animation: apparitionlogport 0.4s 2.3s ease-out forwards;
     }
  
     @keyframes apparitionlogport{ 
@@ -774,39 +708,16 @@ div.menu1{
         width: 17px; 
         margin-left:3.5px;
     } 
-    .dropdown{ 
+    
+    select{
+        position: absolute;
         top: 60px;
-        right: 8px;
-        
-    } 
-    .select{ 
-        border-radius: 5px;
+        right:7px; 
+        border-radius: 6px;
         padding: 5px; 
-        width: 70px;
-        font-size: 8px; 
-    }
-    .select-clicked{
-        border: 2px #26489a solid;
-        box-shadow: 0 0 2px #26489a; 
-    }    
-    .caret{ 
-        border-left: 3px solid transparent;
-        border-right: 3px solid transparent;
-        border-top: 4.5px solid #fff; 
-     
-    }  
-    .mennu { 
-        padding: 3px 6px; 
-        border-radius: 5px; 
-        margin-top: 5px;  
-    }
-    .mennu li{
-        padding: 2px 2px; 
-        margin: 2px 0 ;
-        border-radius: 1px;
-        cursor: pointer; 
-        font-size: 8px;
-    }
+        width: 90px;
+        font-size: 9px; 
+    } 
     .loader{ 
         width:35px;
         height: 35px;
@@ -826,6 +737,8 @@ div.menu1{
 .container{ 
     background: url('../img/img.jpg');
     background-size: cover; 
+    background-position-x: center;
+    background-position-y: -10vh;
     width: 100%;
     height: 50pc;   
 } 
@@ -1015,13 +928,13 @@ div.menu1{
             margin-top: 0;
         }
         25%{
-            margin-top: -45px;
+            margin-top: -47px;
         }
         50%{
-            margin-top: -90px;
+            margin-top: -94px;
         }
         75%{
-            margin-top: -135px;
+            margin-top: -141px;
         }
         100%{
             margin-top: 0;
@@ -1032,7 +945,7 @@ div.menu1{
 /* phone */
 @media screen and (max-width: 500px){ 
     .container{  
-        height: 33pc;   
+        height: 33pc;    
     } 
     .texte1{
         padding:  8pc 0; 

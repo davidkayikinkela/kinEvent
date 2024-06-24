@@ -21,34 +21,34 @@ hamburgerWrapper.addEventListener('click', () => {
 })
 
 
-const dropdowns = document.querySelectorAll('.dropdown');
-dropdowns.forEach(dropdown => {
-    const select = dropdown.querySelector('.select');
-    const caret = dropdown.querySelector('.caret');
-    const menu = dropdown.querySelector('.mennu');
-    const options = dropdown.querySelector('.mennu li');
-    const selected = dropdown.querySelector('.selected');
+// const dropdowns = document.querySelectorAll('.dropdown');
+// dropdowns.forEach(dropdown => {
+//     const select = dropdown.querySelector('.select');
+//     const caret = dropdown.querySelector('.caret');
+//     const menu = dropdown.querySelector('.mennu');
+//     const options = dropdown.querySelector('.mennu li');
+//     const selected = dropdown.querySelector('.selected');
 
-    select.addEventListener('click', () => {
-        select.classList.toggle('select-clicked');
-        caret.classList.toggle('caret-rotate');
-        menu.classList.toggle('mennu-open');
-    });
-    // options.forEach(option => {
-    //     option.addEventListener('click', () => {
-    //         selected.innerText = option.innerText;
-    //         select.classList.remove('select-clicked');
-    //         caret.classList.remove('caret-rotate');
-    //         menu.classList.remove('mennu-open');
-    //         options.forEach(option => {
-    //             option.classList.remove('actives'); 
-    //         });
-    //         option.classList.add('actives'); 
+//     select.addEventListener('click', () => {
+//         select.classList.toggle('select-clicked');
+//         caret.classList.toggle('caret-rotate');
+//         menu.classList.toggle('mennu-open');
+//     });
+//     options.forEach(option => {
+//         option.addEventListener('click', () => {
+//             selected.innerText = option.innerText;
+//             select.classList.remove('select-clicked');
+//             caret.classList.remove('caret-rotate');
+//             menu.classList.remove('mennu-open');
+//             options.forEach(option => {
+//                 option.classList.remove('actives'); 
+//             });
+//             option.classList.add('actives'); 
 
-    //     });  
-    // });
+//         });  
+//     });
       
-});
+// });
 
 
 
@@ -155,7 +155,7 @@ const cookieBox = document.querySelector(".wrapper"),
     buttons = document.querySelectorAll(".button");
  
 window.addEventListener('load', () => {
-    loader.classList.add('fondu-out'); 
+    loader.classList.add('fondu-out');  
  
     if (document.cookie.includes("codinglab")) return; 
     cookieBox.classList.add("show");
