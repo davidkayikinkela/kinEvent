@@ -2,12 +2,11 @@ const loader = document.querySelector('.section-l');
 
 
 
+ 
 
 
 
-
-
-
+let bod = document.querySelector('bod');
 const hamburgerWrapper = document.querySelector('.hamburger-menu'); 
 const menu = document.querySelector('.menu');
 const logo = document.querySelector('.logo');
@@ -18,6 +17,7 @@ hamburgerWrapper.addEventListener('click', () => {
     menu.classList.toggle('mobile-menu');
     logo.classList.toggle('top');
     body.classList.toggle('bod');
+    
 })
 
 
@@ -157,6 +157,7 @@ const cookieBox = document.querySelector(".wrapper"),
 window.addEventListener('load', () => {
     loader.classList.add('fondu-out');  
  
+    body.classList.add('bo');
     if (document.cookie.includes("codinglab")) return; 
     cookieBox.classList.add("show");
 
@@ -177,7 +178,7 @@ Notification.requestPermission( () => {
     if (Notification.permission == 'granted') { 
           
     } else {
-        console.log('Veuillez accorder au navigateur la possibilité de recevoir des notifications !')
+        alert('Veuillez accorder au navigateur la possibilité de recevoir des notifications !')
     } 
 }) 
 
